@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessObjects
+﻿namespace BusinessObjects
 {
     public class User
     {
+        public User(string userID, string userName, string email, string address, string phone, string roleID, string password, bool status)
+        {
+            UserID = userID;
+            UserName = userName;
+            Email = email;
+            Address = address;
+            Phone = phone;
+            RoleID = roleID;
+            Password = password;
+            Status = status;
+        }
+
         public string UserID { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }

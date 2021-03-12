@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessObjects
+﻿namespace BusinessObjects
 {
     public class Category
     {
+        public Category(string categoryID, string categoryName)
+        {
+            CategoryID = categoryID;
+            CategoryName = categoryName;
+        }
+
         public string CategoryID { get; set; }
         public string CategoryName { get; set; }
     }

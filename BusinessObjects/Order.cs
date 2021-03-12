@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessObjects
+﻿namespace BusinessObjects
 {
     public class Order
     {
+        public Order(int orderID, string orderDate, float totalPrice, string note, string userID, string cusPhone, bool status)
+        {
+            OrderID = orderID;
+            OrderDate = orderDate;
+            TotalPrice = totalPrice;
+            Note = note;
+            UserID = userID;
+            CusPhone = cusPhone;
+            Status = status;
+        }
+
         public int OrderID { get; set; }
         public string OrderDate { get; set; }
         public float TotalPrice { get; set; }

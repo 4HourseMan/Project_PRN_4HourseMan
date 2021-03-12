@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessObjects
+﻿namespace BusinessObjects
 {
     public class Role
     {
+        public Role(string roleID, string roleName)
+        {
+            RoleID = roleID;
+            RoleName = roleName;
+        }
+
         public string RoleID { get; set; }
         public string RoleName { get; set; }
     }

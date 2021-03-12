@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessObjects
+﻿namespace BusinessObjects
 {
     public class OrderDetail
     {
+        public OrderDetail(int detailID, int orderID, string productID, int quantity, float price)
+        {
+            DetailID = detailID;
+            OrderID = orderID;
+            ProductID = productID;
+            Quantity = quantity;
+            Price = price;
+        }
+
         public int DetailID { get; set; }
         public int OrderID { get; set; }
         public string ProductID { get; set; }
