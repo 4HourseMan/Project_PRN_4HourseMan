@@ -1,7 +1,7 @@
 ﻿
 namespace WinForms
 {
-    partial class Form1
+    partial class ManageCar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,20 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ManageCar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(1217, 606);
+            this.Name = "ManageCar";
+            this.Text = "Chain Hang Low - Manage Cars";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
