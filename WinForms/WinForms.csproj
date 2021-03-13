@@ -67,6 +67,36 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageCustomerInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCustomerInfor.Designer.cs">
+      <DependentUpon>ManageCustomerInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageEmployee.Designer.cs">
+      <DependentUpon>ManageEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOrder.Designer.cs">
+      <DependentUpon>ManageOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOrderDetail.Designer.cs">
+      <DependentUpon>ManageOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSupllier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSupllier.Designer.cs">
+      <DependentUpon>ManageSupllier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
@@ -95,6 +125,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCustomerInfor.resx">
+      <DependentUpon>ManageCustomerInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEmployee.resx">
+      <DependentUpon>ManageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOrder.resx">
+      <DependentUpon>ManageOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOrderDetail.resx">
+      <DependentUpon>ManageOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSupllier.resx">
+      <DependentUpon>ManageSupllier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
