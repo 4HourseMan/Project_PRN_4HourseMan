@@ -1,9 +1,5 @@
 ﻿using BusinessObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BusinessObjects.DataAccess;
 
 namespace WinForms.Models
 {
@@ -13,7 +9,13 @@ namespace WinForms.Models
 
         void IModel.AddProduct(Product p)
         {
-          
+
+        }
+
+        User IModel.Login(string UserID, string Password)
+        {
+            UserData user = new UserData();
+            return user.CheckLogin(UserID, Password);
         }
     }
 }

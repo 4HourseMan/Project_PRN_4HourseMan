@@ -1,50 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BusinessObjects;
+using System;
 using System.Windows.Forms;
+using WinForms.Presenters;
+using WinForms.Views;
 
 namespace WinForms
 {
-    public partial class Login : Form
+    public partial class Login : Form, ILoginView
     {
+        private LoginPresenter loginPresenter;
         public Login()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public string UserID
         {
-
+            get { return txtUserID.Text.Trim(); }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public string Password
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            get { return txtPassword.Text.Trim(); }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            loginPresenter = new LoginPresenter(this);
+            User user = loginPresenter.Login();
+            if (user.RoleID.Contains("AD"))
+            {
+                AdHome adHome = new AdHome();
+                this.Hide();
+                adHome.Show();
+            }
         }
     }
 }

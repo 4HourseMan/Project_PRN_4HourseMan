@@ -105,7 +105,9 @@
     </Compile>
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\ManagerCarPresenter.cs" />
+    <Compile Include="Presenters\Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
@@ -132,6 +134,8 @@
       <DependentUpon>ManageCar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ILoginView.cs" />
+    <Compile Include="Views\IView.cs" />
     <EmbeddedResource Include="FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>

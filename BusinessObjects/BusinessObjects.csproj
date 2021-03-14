@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Supplier.cs" />
     <Compile Include="OrderDetail.cs" />
     <Compile Include="Order.cs" />
@@ -58,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataObjescts\DataObjescts.csproj">
+      <Project>{85a2c5fd-1e2b-4335-9fe9-6cf4b8126076}</Project>
+      <Name>DataObjescts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
