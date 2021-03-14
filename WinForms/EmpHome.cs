@@ -10,9 +10,16 @@ namespace WinForms
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void EmpHome_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Environment.Exit(0);
+        }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
     }
 }

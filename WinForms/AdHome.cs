@@ -10,14 +10,11 @@ namespace WinForms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
     }
 }

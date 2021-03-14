@@ -33,11 +33,24 @@ namespace WinForms
         {
             loginPresenter = new LoginPresenter(this);
             User user = loginPresenter.Login();
-            if (user.RoleID.Contains("AD"))
+            if(user != null)
             {
-                AdHome adHome = new AdHome();
-                this.Hide();
-                adHome.Show();
+                if (user.RoleID.Contains("AD"))
+                {
+                    AdHome adHome = new AdHome();
+                    this.Hide();
+                    adHome.Show();
+                }
+                else
+                {
+                    EmpHome empHome = new EmpHome();
+                    this.Hide();
+                    empHome.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("User not exist");
             }
         }
     }
