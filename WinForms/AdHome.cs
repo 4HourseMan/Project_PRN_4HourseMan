@@ -16,5 +16,16 @@ namespace WinForms
             this.Hide();
             login.Show();
         }
+
+        private void btnManagePro_Click(object sender, EventArgs e)
+        {
+            ManageCar car = new ManageCar();
+            car.Show();
+        }
+
+        private void AdHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

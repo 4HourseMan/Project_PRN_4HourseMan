@@ -29,7 +29,7 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnManagePro = new System.Windows.Forms.Button();
             this.btnManageEmployee = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -39,17 +39,18 @@ namespace WinForms
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnManagePro
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(40, 129);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 485);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Manage Car";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnManagePro.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagePro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnManagePro.Location = new System.Drawing.Point(40, 129);
+            this.btnManagePro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManagePro.Name = "btnManagePro";
+            this.btnManagePro.Size = new System.Drawing.Size(180, 485);
+            this.btnManagePro.TabIndex = 0;
+            this.btnManagePro.Text = "Manage Car";
+            this.btnManagePro.UseVisualStyleBackColor = true;
+            this.btnManagePro.Click += new System.EventHandler(this.btnManagePro_Click);
             // 
             // btnManageEmployee
             // 
@@ -149,17 +150,18 @@ namespace WinForms
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnManageEmployee);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnManagePro);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdHome";
             this.Text = "Chain Hang Low - Admin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdHome_FormClosing);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnManagePro;
         private System.Windows.Forms.Button btnManageEmployee;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

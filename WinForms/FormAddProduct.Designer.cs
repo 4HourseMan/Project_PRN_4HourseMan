@@ -29,15 +29,9 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCreateDate = new System.Windows.Forms.TextBox();
-            this.radioStatus = new System.Windows.Forms.GroupBox();
-            this.radioTrue = new System.Windows.Forms.RadioButton();
-            this.radioFalse = new System.Windows.Forms.RadioButton();
             this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,60 +42,7 @@ namespace WinForms
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtProductID = new System.Windows.Forms.TextBox();
-            this.radioStatus.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(372, 395);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 25);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Create Date:";
-            // 
-            // txtCreateDate
-            // 
-            this.txtCreateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCreateDate.Location = new System.Drawing.Point(523, 390);
-            this.txtCreateDate.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCreateDate.Name = "txtCreateDate";
-            this.txtCreateDate.Size = new System.Drawing.Size(383, 30);
-            this.txtCreateDate.TabIndex = 48;
-            // 
-            // radioStatus
-            // 
-            this.radioStatus.Controls.Add(this.radioTrue);
-            this.radioStatus.Controls.Add(this.radioFalse);
-            this.radioStatus.Location = new System.Drawing.Point(521, 426);
-            this.radioStatus.Name = "radioStatus";
-            this.radioStatus.Size = new System.Drawing.Size(237, 100);
-            this.radioStatus.TabIndex = 47;
-            this.radioStatus.TabStop = false;
-            // 
-            // radioTrue
-            // 
-            this.radioTrue.AutoSize = true;
-            this.radioTrue.Location = new System.Drawing.Point(18, 38);
-            this.radioTrue.Name = "radioTrue";
-            this.radioTrue.Size = new System.Drawing.Size(59, 21);
-            this.radioTrue.TabIndex = 27;
-            this.radioTrue.TabStop = true;
-            this.radioTrue.Text = "True";
-            this.radioTrue.UseVisualStyleBackColor = true;
-            // 
-            // radioFalse
-            // 
-            this.radioFalse.AutoSize = true;
-            this.radioFalse.Location = new System.Drawing.Point(147, 37);
-            this.radioFalse.Name = "radioFalse";
-            this.radioFalse.Size = new System.Drawing.Size(63, 21);
-            this.radioFalse.TabIndex = 28;
-            this.radioFalse.TabStop = true;
-            this.radioFalse.Text = "False";
-            this.radioFalse.UseVisualStyleBackColor = true;
             // 
             // cbSupplier
             // 
@@ -123,7 +64,7 @@ namespace WinForms
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCreate.Location = new System.Drawing.Point(523, 549);
+            this.btnCreate.Location = new System.Drawing.Point(523, 397);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(383, 48);
@@ -131,17 +72,6 @@ namespace WinForms
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(405, 459);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 25);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Status :";
             // 
             // label7
             // 
@@ -250,13 +180,9 @@ namespace WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 648);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCreateDate);
-            this.Controls.Add(this.radioStatus);
             this.Controls.Add(this.cbSupplier);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
@@ -269,24 +195,15 @@ namespace WinForms
             this.Controls.Add(this.txtProductID);
             this.Name = "FormAddProduct";
             this.Text = "FormAddProduct";
-            this.radioStatus.ResumeLayout(false);
-            this.radioStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCreateDate;
-        private System.Windows.Forms.GroupBox radioStatus;
-        private System.Windows.Forms.RadioButton radioTrue;
-        private System.Windows.Forms.RadioButton radioFalse;
         private System.Windows.Forms.ComboBox cbSupplier;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;

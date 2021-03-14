@@ -2,9 +2,11 @@
 using System;
 using System.Windows.Forms;
 using WinForms.Presenters;
+using WinForms.Views;
+
 namespace WinForms
 {
-    public partial class FormAddProduct : Form
+    public partial class FormAddProduct : Form,IManageCarView
     {
         private ManagerCarPresenter MCP;
         public FormAddProduct()
@@ -12,22 +14,23 @@ namespace WinForms
             InitializeComponent();
         }
 
+        public string ProductID => txtProductID.Text;
+
+        public string ProductName1 => txtProductName.Text;
+
+        public string CategoryID => cbCategory.Text;
+
+        public string SupplierID => cbSupplier.Text;
+
+        public float Price => float.Parse( txtPrice.Text);
+
+        public int Quantity => int.Parse(txtQuantity.Text);
+
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            String ProductID = txtProductID.Text;
-            String ProductName = txtProductName.Text;
-            String CategoryID = cbCategory.Text;
-            String Price = txtPrice.Text;
-            String Quantity = txtQuantity.Text;
-            String SupplierID = cbSupplier.Text;
-            String Status = txtProductID.Text;
-
-
-
-            DateTime CreateDate = DateTime.Now;
-            Product p = new Product(ProductID, ProductName, CategoryID, SupplierID, float.Parse(Price), int.Parse(Quantity), CreateDate, true);
-            MCP.addProduct(p);
+            MCP = new ManagerCarPresenter(this);
+            MCP.AddProduct();
         }
     }
 }
