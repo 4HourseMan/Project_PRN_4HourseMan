@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace WinForms.Models
 {
-    class Model : IModel
+    class Model
     {
-        public void addProduct(Product p)
+        public static void addProduct(Product p)
         {
 
         }
