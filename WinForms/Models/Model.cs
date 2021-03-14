@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace WinForms.Models
 {
-    class Model : IModel
+    public class Model : IModel
     {
-        public void addProduct(Product p)
-        {
 
+
+        void IModel.AddProduct(Product p)
+        {
+          
         }
     }
 }

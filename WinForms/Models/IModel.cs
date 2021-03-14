@@ -9,6 +9,6 @@ namespace WinForms.Models
 {
     public interface IModel
     {
-        void addProduct(Product p);
+        void AddProduct(Product p);
     }
 }
