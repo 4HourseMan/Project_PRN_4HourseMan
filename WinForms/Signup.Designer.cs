@@ -53,7 +53,7 @@ namespace WinForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Niagara Engraved", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 213);
+            this.label1.Location = new System.Drawing.Point(104, 198);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(500, 128);
@@ -65,7 +65,7 @@ namespace WinForms
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Location = new System.Drawing.Point(225, 36);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 158);
             this.panel1.TabIndex = 5;
@@ -73,8 +73,8 @@ namespace WinForms
             // txtUserID
             // 
             this.txtUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserID.Location = new System.Drawing.Point(193, 463);
-            this.txtUserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserID.Location = new System.Drawing.Point(183, 393);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(435, 41);
             this.txtUserID.TabIndex = 7;
@@ -82,8 +82,8 @@ namespace WinForms
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(193, 400);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Location = new System.Drawing.Point(183, 330);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(435, 41);
             this.txtUserName.TabIndex = 6;
@@ -92,7 +92,7 @@ namespace WinForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 544);
+            this.label3.Location = new System.Drawing.Point(39, 474);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 33);
@@ -103,7 +103,7 @@ namespace WinForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 405);
+            this.label2.Location = new System.Drawing.Point(30, 335);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 33);
@@ -114,7 +114,7 @@ namespace WinForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 607);
+            this.label4.Location = new System.Drawing.Point(11, 537);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 33);
@@ -125,7 +125,7 @@ namespace WinForms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(69, 468);
+            this.label5.Location = new System.Drawing.Point(59, 398);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 33);
@@ -135,8 +135,8 @@ namespace WinForms
             // txtRePassword
             // 
             this.txtRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRePassword.Location = new System.Drawing.Point(193, 602);
-            this.txtRePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRePassword.Location = new System.Drawing.Point(183, 532);
+            this.txtRePassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.Size = new System.Drawing.Size(435, 41);
             this.txtRePassword.PasswordChar = '*';
@@ -145,8 +145,8 @@ namespace WinForms
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(193, 539);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(183, 469);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(435, 41);
             this.txtPassword.PasswordChar = '*';
@@ -155,8 +155,8 @@ namespace WinForms
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(193, 736);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Location = new System.Drawing.Point(183, 666);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(435, 41);
             this.txtPhone.TabIndex = 15;
@@ -164,8 +164,8 @@ namespace WinForms
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(193, 673);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(183, 603);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(435, 41);
             this.txtEmail.TabIndex = 14;
@@ -173,8 +173,8 @@ namespace WinForms
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(193, 807);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Location = new System.Drawing.Point(183, 737);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(435, 41);
             this.txtAddress.TabIndex = 16;
@@ -183,7 +183,7 @@ namespace WinForms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(49, 812);
+            this.label6.Location = new System.Drawing.Point(39, 742);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 33);
@@ -194,7 +194,7 @@ namespace WinForms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(77, 678);
+            this.label7.Location = new System.Drawing.Point(67, 608);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 33);
@@ -205,7 +205,7 @@ namespace WinForms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(69, 747);
+            this.label8.Location = new System.Drawing.Point(59, 677);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 33);
@@ -216,8 +216,8 @@ namespace WinForms
             // 
             this.btnSignUp.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSignUp.Location = new System.Drawing.Point(225, 928);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignUp.Location = new System.Drawing.Point(231, 800);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(272, 48);
             this.btnSignUp.TabIndex = 20;
@@ -230,7 +230,7 @@ namespace WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(728, 1041);
+            this.ClientSize = new System.Drawing.Size(728, 876);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -248,8 +248,9 @@ namespace WinForms
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chain Hang Low - Sign Up";
             this.ResumeLayout(false);
             this.PerformLayout();

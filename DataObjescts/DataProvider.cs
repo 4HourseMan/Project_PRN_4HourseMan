@@ -34,6 +34,7 @@ namespace DataObjescts
             da.Fill(ds);
             return ds;
         }
+
         public static SqlDataReader ExecuteQueryWithDataReader(string cmdText, params SqlParameter[] param)
         {
             SqlDataReader rd = null;
@@ -49,9 +50,10 @@ namespace DataObjescts
                 rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
             catch (Exception)
-            {}
+            { }
             return rd;
         }
+
         //ExecuteNonQuery
         public static bool ExecuteNonQuery(string cmdText, params SqlParameter[] paramList)
         {
@@ -68,7 +70,7 @@ namespace DataObjescts
                 result = cmd.ExecuteNonQuery() > 0;
             }
             catch (Exception)
-            {}
+            { }
             finally
             {
                 cnn.Close();
@@ -91,7 +93,7 @@ namespace DataObjescts
                 result = (int)cmd.ExecuteScalar();
             }
             catch (Exception)
-            {}
+            { }
             finally
             {
                 cnn.Close();
