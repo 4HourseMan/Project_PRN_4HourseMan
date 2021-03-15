@@ -29,7 +29,8 @@ namespace WinForms.Models
 
         public bool UpdateProduct(Product p)
         {
-            throw new NotImplementedException();
+            ProductData product = new ProductData();
+            return product.UpdateProduct(p);
         }
 
     }

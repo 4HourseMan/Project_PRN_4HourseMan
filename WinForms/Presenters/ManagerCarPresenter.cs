@@ -22,6 +22,19 @@ namespace WinForms.Presenters
             return ProductModel.AddProduct(p);
         }
 
+        public bool UpdateProduct()
+        {
+            string ProductID = View.ProductID;
+            string ProductName = View.ProductName1;
+            string CategoryID = View.CategoryID;
+            string SupplierID = View.SupplierID;
+            float Price = View.Price;
+            int Quantity = View.Quantity;
+            DateTime CreateDate = DateTime.Now;
+            Product p = new Product(ProductID, ProductName, CategoryID, SupplierID, Price, Quantity, CreateDate, true);
+            return ProductModel.UpdateProduct(p);
+        }
+
         public List<Product> SearchProduct()
         {
             string ProductName = "%" + View.SearchName + "%";
