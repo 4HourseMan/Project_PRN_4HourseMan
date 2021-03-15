@@ -139,6 +139,7 @@ namespace WinForms
             this.txtRePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.Size = new System.Drawing.Size(435, 41);
+            this.txtRePassword.PasswordChar = '*';
             this.txtRePassword.TabIndex = 11;
             // 
             // txtPassword
@@ -148,6 +149,7 @@ namespace WinForms
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(435, 41);
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.TabIndex = 10;
             // 
             // txtPhone
