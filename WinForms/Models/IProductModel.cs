@@ -9,6 +9,9 @@ namespace WinForms.Models
 {
     public interface IProductModel
     {
-        void AddProduct(Product p);
+        bool AddProduct(Product p);
+        bool DeleteProduct(String id);
+        bool UpdateProduct(Product p);
+        List<Product> SearchProduct(String name, bool status);
     }
 }

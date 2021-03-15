@@ -10,7 +10,7 @@ namespace BusinessObjects.DataAccess
 {
     public class ProductData
     {
-        public void AddProduct(Product p)
+        public bool AddProduct(Product p)
         {
             SqlParameter id = new SqlParameter("@ProductID", p.ProductID);
             SqlParameter name = new SqlParameter("@ProductName", p.ProductName);
@@ -22,12 +22,44 @@ namespace BusinessObjects.DataAccess
             SqlParameter status = new SqlParameter("@Status", p.Status);
             try
             {
-                DataProvider.ExecuteNonQuery("InsertProduct", id, name, cate, pri, quant, sup, date, status);
+                return DataProvider.ExecuteNonQuery("InsertProduct", id, name, cate, pri, quant, sup, date, status);
             }
             catch (SqlException se)
             {
-                throw new Exception(se.Message);
+                return false;
             }
+        }
+
+        public List<Product> SearchProduct(String searchName, bool status)
+        {
+            SqlParameter name = new SqlParameter("@ProductName", searchName);
+            List<Product> list = null;
+            try
+            {
+                SqlDataReader rd = DataProvider.ExecuteQueryWithDataReader("SearchProductByName", name);
+                while (rd.Read())
+                {
+                    string id= rd.GetString(0);
+                    string nameP= rd.GetString(0);
+                    string cate= rd.GetString(0);
+                    string sup= rd.GetString(0);
+                    float price= Convert.ToSingle(rd.GetDouble(3));
+                    
+                    int quant= rd.GetInt32(4);
+                    DateTime date= rd.GetDateTime(6);
+                    Product p = new Product(id, nameP, cate, sup, price, quant, date, status);
+                    if (list == null)
+                    {
+                        list = new List<Product>();
+                    }
+                    list.Add(p);
+                }
+            }
+            catch (SqlException se)
+            {
+                return null;
+            }
+            return list;
         }
     }
 }

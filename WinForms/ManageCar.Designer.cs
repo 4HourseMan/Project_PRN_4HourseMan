@@ -30,15 +30,7 @@ namespace WinForms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblCar = new System.Windows.Forms.DataGridView();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -47,7 +39,6 @@ namespace WinForms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -58,106 +49,37 @@ namespace WinForms
             this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.txtSearchName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.radioTrue = new System.Windows.Forms.RadioButton();
-            this.radioFalse = new System.Windows.Forms.RadioButton();
-            this.radioStatus = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCreateDate = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.radioStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.tblCar);
             this.panel1.Location = new System.Drawing.Point(17, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 534);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // tblCar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(0, -1);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1005, 532);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Category";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Price";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Quantity";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Supplier";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "CreateDate";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Status";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
+            this.tblCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblCar.Location = new System.Drawing.Point(0, -1);
+            this.tblCar.Margin = new System.Windows.Forms.Padding(4);
+            this.tblCar.Name = "tblCar";
+            this.tblCar.RowHeadersWidth = 51;
+            this.tblCar.Size = new System.Drawing.Size(1005, 532);
+            this.tblCar.TabIndex = 0;
             // 
             // txtProductID
             // 
             this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductID.Location = new System.Drawing.Point(1203, 52);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(383, 30);
             this.txtProductID.TabIndex = 1;
@@ -166,7 +88,7 @@ namespace WinForms
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.Location = new System.Drawing.Point(1203, 107);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(383, 30);
             this.txtProductName.TabIndex = 2;
@@ -175,7 +97,7 @@ namespace WinForms
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(1203, 224);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(383, 30);
             this.txtPrice.TabIndex = 4;
@@ -184,7 +106,7 @@ namespace WinForms
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.Location = new System.Drawing.Point(1203, 283);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(383, 30);
             this.txtQuantity.TabIndex = 5;
@@ -233,17 +155,6 @@ namespace WinForms
             this.label4.TabIndex = 11;
             this.label4.Text = "Category :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1085, 474);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 25);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Status :";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -271,7 +182,7 @@ namespace WinForms
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCreate.Location = new System.Drawing.Point(971, 619);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(127, 48);
             this.btnCreate.TabIndex = 19;
@@ -284,7 +195,7 @@ namespace WinForms
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnUpdate.Location = new System.Drawing.Point(1203, 619);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(127, 48);
             this.btnUpdate.TabIndex = 20;
@@ -296,7 +207,7 @@ namespace WinForms
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelete.Location = new System.Drawing.Point(1429, 619);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 48);
             this.btnDelete.TabIndex = 21;
@@ -337,38 +248,7 @@ namespace WinForms
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Text = "Search by Name";
             this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // radioTrue
-            // 
-            this.radioTrue.AutoSize = true;
-            this.radioTrue.Location = new System.Drawing.Point(18, 38);
-            this.radioTrue.Name = "radioTrue";
-            this.radioTrue.Size = new System.Drawing.Size(59, 21);
-            this.radioTrue.TabIndex = 27;
-            this.radioTrue.TabStop = true;
-            this.radioTrue.Text = "True";
-            this.radioTrue.UseVisualStyleBackColor = true;
-            // 
-            // radioFalse
-            // 
-            this.radioFalse.AutoSize = true;
-            this.radioFalse.Location = new System.Drawing.Point(147, 37);
-            this.radioFalse.Name = "radioFalse";
-            this.radioFalse.Size = new System.Drawing.Size(63, 21);
-            this.radioFalse.TabIndex = 28;
-            this.radioFalse.TabStop = true;
-            this.radioFalse.Text = "False";
-            this.radioFalse.UseVisualStyleBackColor = true;
-            // 
-            // radioStatus
-            // 
-            this.radioStatus.Controls.Add(this.radioTrue);
-            this.radioStatus.Controls.Add(this.radioFalse);
-            this.radioStatus.Location = new System.Drawing.Point(1201, 441);
-            this.radioStatus.Name = "radioStatus";
-            this.radioStatus.Size = new System.Drawing.Size(237, 100);
-            this.radioStatus.TabIndex = 29;
-            this.radioStatus.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label6
             // 
@@ -398,7 +278,6 @@ namespace WinForms
             this.ClientSize = new System.Drawing.Size(1623, 746);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCreateDate);
-            this.Controls.Add(this.radioStatus);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearchName);
             this.Controls.Add(this.cbSupplier);
@@ -406,7 +285,6 @@ namespace WinForms
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
@@ -418,15 +296,13 @@ namespace WinForms
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtProductID);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageCar";
             this.Text = "Chain Hang Low - Manage Cars";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManageCar_FormClosing);
             this.Load += new System.EventHandler(this.ManageCar_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.radioStatus.ResumeLayout(false);
-            this.radioStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,15 +311,7 @@ namespace WinForms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridView tblCar;
         private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.TextBox txtPrice;
@@ -452,7 +320,6 @@ namespace WinForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnCreate;
@@ -463,9 +330,6 @@ namespace WinForms
         private System.Windows.Forms.ComboBox cbSupplier;
         private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.RadioButton radioTrue;
-        private System.Windows.Forms.RadioButton radioFalse;
-        private System.Windows.Forms.GroupBox radioStatus;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCreateDate;
     }

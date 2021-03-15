@@ -10,10 +10,27 @@ namespace WinForms.Models
 {
     public class ProductModel : IProductModel
     {
-        public void AddProduct(Product p)
+        public bool AddProduct(Product p)
         {
             ProductData product = new ProductData();
-            product.AddProduct(p);
+            return product.AddProduct(p);
         }
+
+        public bool DeleteProduct(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> SearchProduct(string name, bool status)
+        {
+            ProductData product = new ProductData();
+            return product.SearchProduct(name, status);
+        }
+
+        public bool UpdateProduct(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

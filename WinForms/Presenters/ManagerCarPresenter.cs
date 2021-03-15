@@ -1,5 +1,6 @@
 ﻿using BusinessObjects;
 using System;
+using System.Collections.Generic;
 using WinForms.Models;
 using WinForms.Views;
 
@@ -8,7 +9,7 @@ namespace WinForms.Presenters
     public class ManagerCarPresenter : Presenter<IManageCarView>
     {
         public ManagerCarPresenter(IManageCarView view) : base(view) { }
-        public void AddProduct()
+        public bool AddProduct()
         {
             string ProductID = View.ProductID;
             string ProductName = View.ProductName1;
@@ -18,8 +19,17 @@ namespace WinForms.Presenters
             int Quantity = View.Quantity;
             DateTime CreateDate = DateTime.Now;
             Product p = new Product(ProductID, ProductName, CategoryID, SupplierID, Price, Quantity, CreateDate, true);
-            ProductModel.AddProduct(p);
+            return ProductModel.AddProduct(p);
         }
 
+        public List<Product> SearchProduct()
+        {
+            string ProductName = "%" + View.SearchName + "%";
+            if (ProductName == null)
+            {
+                ProductName = "%%";
+            }
+            return ProductModel.SearchProduct(ProductName, true);
+        }
     }
 }

@@ -26,11 +26,20 @@ namespace WinForms
 
         public int Quantity => int.Parse(txtQuantity.Text);
 
+        public string SearchName => null;
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             MCP = new ManagerCarPresenter(this);
-            MCP.AddProduct();
+            if (MCP.AddProduct())
+            {
+                MessageBox.Show("OK");
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Not OK");
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ namespace WinForms.Views
     public interface IManageCarView : IView
     {
         string ProductID { get; }
+        string SearchName { get; }
         string ProductName1 { get; }
         string CategoryID { get; }
         string SupplierID { get; }
