@@ -27,5 +27,11 @@ namespace WinForms
         {
             Environment.Exit(0);
         }
+
+        private void btnManageEmployee_Click(object sender, EventArgs e)
+        {
+            ManageEmployee manageEmployee = new ManageEmployee();
+            manageEmployee.Show();
+        }
     }
 }

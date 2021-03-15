@@ -63,6 +63,7 @@ namespace WinForms
             this.btnManageEmployee.TabIndex = 1;
             this.btnManageEmployee.Text = "Manage Employee";
             this.btnManageEmployee.UseVisualStyleBackColor = true;
+            this.btnManageEmployee.Click += new System.EventHandler(this.btnManageEmployee_Click);
             // 
             // button3
             // 

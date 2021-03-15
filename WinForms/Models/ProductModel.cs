@@ -10,7 +10,6 @@ namespace WinForms.Models
 {
     public class ProductModel : IProductModel
     {
-
         public void AddProduct(Product p)
         {
             ProductData product = new ProductData();

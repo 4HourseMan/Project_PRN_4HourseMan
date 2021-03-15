@@ -6,33 +6,34 @@ using WinForms.Views;
 
 namespace WinForms
 {
-    public partial class Login : Form, ILoginView
+    public partial class Login : Form, IUserView
     {
-        private LoginPresenter loginPresenter;
+        private UserPresenter userPresenter;
         public Login()
         {
             InitializeComponent();
         }
 
-        public string UserID
-        {
-            get { return txtUserID.Text.Trim(); }
-        }
+        public string UserID => txtUserID.Text.Trim();
 
-        public string Password
-        {
-            get { return txtPassword.Text.Trim(); }
-        }
+        public string UserName => "";
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        public string Address => "";
+
+        public string Phone => "";
+
+        public string RoleID => "";
+
+        public string Password => txtPassword.Text.Trim();
+
+        public string Email => "";
+
+        public bool Status => throw new NotImplementedException();
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            loginPresenter = new LoginPresenter(this);
-            User user = loginPresenter.Login();
+            userPresenter = new UserPresenter(this);
+            User user = userPresenter.Login();
             if(user != null)
             {
                 if (user.RoleID.Contains("AD"))
@@ -52,6 +53,17 @@ namespace WinForms
             {
                 MessageBox.Show("User not exist");
             }
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Signup signup = new Signup();
+            signup.Show();
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

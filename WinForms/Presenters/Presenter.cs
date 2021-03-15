@@ -5,12 +5,11 @@ namespace WinForms.Presenters
 {
     public class Presenter<T> where T : IView
     {
-        protected static IModel Model { get; private set; }
-
+        protected static IUserModel UserModel { get; private set; }
         protected static IProductModel ProductModel { get; private set; }
         static Presenter()
         {
-            Model = new Model();
+            UserModel = new UserModel();
             ProductModel = new ProductModel();
         }
 

@@ -48,10 +48,8 @@ namespace DataObjescts
                 cnn.Open();
                 rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error : " + ex.Message);
-            }
+            catch (Exception)
+            {}
             return rd;
         }
         //ExecuteNonQuery
@@ -69,10 +67,8 @@ namespace DataObjescts
                 cnn.Open();
                 result = cmd.ExecuteNonQuery() > 0;
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error : " + ex.Message);
-            }
+            catch (Exception)
+            {}
             finally
             {
                 cnn.Close();
@@ -94,10 +90,8 @@ namespace DataObjescts
                 cnn.Open();
                 result = (int)cmd.ExecuteScalar();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error : " + ex.Message);
-            }
+            catch (Exception)
+            {}
             finally
             {
                 cnn.Close();
