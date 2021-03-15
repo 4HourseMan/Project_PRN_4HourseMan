@@ -11,10 +11,11 @@ namespace DataObjescts
             //String sv = "LAPTOP-O2NIN5I6\\SQLEXPRESS";
             //String uid = "hienPro";
             //String pwd = "hien12345";
-            String sv = "DESKTOP-DLMULPB";
+            String sv = "LAPTOP-DUJBUOB7";
             String uid = "sa";
-            String pwd = "tam";
-            string strConnection = "server=" + sv + ";database=ThisGonnaBeTheBest;uid=" + uid + ";pwd=" + pwd;
+            String pwd = "sa";
+            String data = "CarManagement";
+            string strConnection = "server=" + sv + ";database=" + data + ";uid=" + uid + ";pwd=" + pwd;
             return strConnection;
         }
 
@@ -34,6 +35,7 @@ namespace DataObjescts
             da.Fill(ds);
             return ds;
         }
+
         public static SqlDataReader ExecuteQueryWithDataReader(string cmdText, params SqlParameter[] param)
         {
             SqlDataReader rd = null;
@@ -49,9 +51,10 @@ namespace DataObjescts
                 rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
             catch (Exception)
-            {}
+            { }
             return rd;
         }
+
         //ExecuteNonQuery
         public static bool ExecuteNonQuery(string cmdText, params SqlParameter[] paramList)
         {
@@ -68,7 +71,7 @@ namespace DataObjescts
                 result = cmd.ExecuteNonQuery() > 0;
             }
             catch (Exception)
-            {}
+            { }
             finally
             {
                 cnn.Close();
@@ -91,7 +94,7 @@ namespace DataObjescts
                 result = (int)cmd.ExecuteScalar();
             }
             catch (Exception)
-            {}
+            { }
             finally
             {
                 cnn.Close();
