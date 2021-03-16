@@ -54,5 +54,20 @@ namespace WinForms
         {
             LoadData();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            MCP = new ManagerCarPresenter(this);
+            if (MCP.UpdateProduct())
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show("Not OK");
+
+            }
+
+        }
     }
 }

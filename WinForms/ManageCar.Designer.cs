@@ -81,6 +81,7 @@ namespace WinForms
             this.txtProductID.Location = new System.Drawing.Point(1203, 52);
             this.txtProductID.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductID.Name = "txtProductID";
+            this.txtProductID.ReadOnly = true;
             this.txtProductID.Size = new System.Drawing.Size(383, 30);
             this.txtProductID.TabIndex = 1;
             // 
@@ -201,6 +202,7 @@ namespace WinForms
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -267,6 +269,7 @@ namespace WinForms
             this.txtCreateDate.Location = new System.Drawing.Point(1203, 405);
             this.txtCreateDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCreateDate.Name = "txtCreateDate";
+            this.txtCreateDate.ReadOnly = true;
             this.txtCreateDate.Size = new System.Drawing.Size(383, 30);
             this.txtCreateDate.TabIndex = 30;
             // 
