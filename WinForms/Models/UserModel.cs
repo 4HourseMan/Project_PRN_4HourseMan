@@ -1,5 +1,6 @@
 ﻿using BusinessObjects;
 using BusinessObjects.DataAccess;
+using System;
 using System.Collections.Generic;
 
 namespace WinForms.Models
@@ -13,9 +14,9 @@ namespace WinForms.Models
             return userData.DeleteEmployee(userID);
         }
 
-        public List<User> GetEmployee()
+        public List<User> GetEmployee(string userName)
         {
-            throw new System.NotImplementedException();
+            return userData.GetAllEmployee(userName);
         }
 
         public bool InsertEmployee(User user)

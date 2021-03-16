@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using System.Collections.Generic;
 using WinForms.Views;
 
 namespace WinForms.Presenters
@@ -43,6 +44,11 @@ namespace WinForms.Presenters
         {
             string UserID = View.UserID;
             return UserModel.DeleteEmployee(UserID);
+        }
+        public List<User> GetAllEmployee()
+        {
+            string UserName = View.UserName;
+            return UserModel.GetEmployee(UserName);
         }
     }
 }
