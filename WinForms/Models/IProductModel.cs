@@ -13,5 +13,7 @@ namespace WinForms.Models
         bool DeleteProduct(String id);
         bool UpdateProduct(Product p);
         List<Product> SearchProduct(String name, bool status);
+        List<Category> GetCate();
+        List<Supplier> GetSup();
     }
 }

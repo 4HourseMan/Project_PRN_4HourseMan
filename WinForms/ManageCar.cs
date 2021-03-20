@@ -14,13 +14,13 @@ namespace WinForms
 
         public string ProductName1 => txtProductName.Text;
 
-        public string CategoryID => cbCategory.Text;
+        public string CategoryID => cbCategory.SelectedValue.ToString();
 
-        public string SupplierID => cbSupplier.Text;
+        public string SupplierID => cbSupplier.SelectedValue.ToString();
 
         public float Price => float.Parse(txtPrice.Text);
 
-        public int Quantity => int.Parse(txtQuantity.Text);
+        public int Quantity => Int32.Parse(txtQuantity.Text);
 
         public string SearchName => txtSearchName.Text;
 
@@ -44,10 +44,18 @@ namespace WinForms
             MCP = new ManagerCarPresenter(this);
             List<Product> list = MCP.SearchProduct();
             tblCar.DataSource = list;
+            List<Category> list1 = MCP.GetCate();
+            cbCategory.DataSource = list1;
+            cbCategory.DisplayMember = "CategoryName";
+            cbCategory.ValueMember = "CategoryID";
+            List<Supplier> listS = MCP.GetSup();
+            cbSupplier.DataSource = listS;
+            cbSupplier.DisplayMember = "SupName";
+            cbSupplier.ValueMember = "SupID";
         }
         private void ManageCar_Load(object sender, EventArgs e)
         {
-            LoadData() ;
+            LoadData();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -61,13 +69,42 @@ namespace WinForms
             if (MCP.UpdateProduct())
             {
                 MessageBox.Show("OK");
+                LoadData();
             }
             else
             {
                 MessageBox.Show("Not OK");
-
             }
+        }
 
+        private void tblCar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = tblCar.Rows[e.RowIndex];
+                txtProductID.Text = row.Cells[0].Value.ToString();
+                txtProductName.Text = row.Cells[1].Value.ToString();
+                cbCategory.SelectedValue = row.Cells[2].Value.ToString();
+                cbSupplier.SelectedValue = row.Cells[3].Value.ToString();
+                txtPrice.Text = row.Cells[4].Value.ToString();
+                txtQuantity.Text = row.Cells[5].Value.ToString();
+                txtCreateDate.Text = row.Cells[6].Value.ToString();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            MCP = new ManagerCarPresenter(this);
+            if (MCP.DeleteProduct())
+            {
+                MessageBox.Show("OK");
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Not OK");
+            }
         }
     }
 }

@@ -8,13 +8,13 @@ namespace DataObjescts
     {
         public static string getConnectionString()
         {
-            //String sv = "LAPTOP-O2NIN5I6\\SQLEXPRESS";
-            //String uid = "hienPro";
-            //String pwd = "hien12345";
-            String sv = "DESKTOP-DLMULPB";
-            String uid = "sa";
-            String pwd = "tam";
-            string strConnection = "server=" + sv + ";database=ThisGonnaBeTheBest;uid=" + uid + ";pwd=" + pwd;
+            String sv = "hien-pro.database.windows.net";
+            String uid = "hienPro";
+            String pwd = "hien12345?";
+            //String sv = "DESKTOP-DLMULPB";
+            //String uid = "sa";
+            //String pwd = "tam";
+            string strConnection = "server=" + sv + ";database=prnProject;uid=" + uid + ";pwd=" + pwd;
             return strConnection;
         }
 

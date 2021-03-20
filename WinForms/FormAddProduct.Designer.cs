@@ -195,6 +195,7 @@ namespace WinForms
             this.Controls.Add(this.txtProductID);
             this.Name = "FormAddProduct";
             this.Text = "FormAddProduct";
+            this.Load += new System.EventHandler(this.FormAddProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

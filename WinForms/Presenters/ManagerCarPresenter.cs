@@ -35,6 +35,12 @@ namespace WinForms.Presenters
             return ProductModel.UpdateProduct(p);
         }
 
+        public bool DeleteProduct()
+        {
+            string ProductID = View.ProductID;
+            return ProductModel.DeleteProduct(ProductID);
+        }
+
         public List<Product> SearchProduct()
         {
             string ProductName = "%" + View.SearchName + "%";
@@ -43,6 +49,14 @@ namespace WinForms.Presenters
                 ProductName = "%%";
             }
             return ProductModel.SearchProduct(ProductName, true);
+        }
+        public List<Category> GetCate()
+        {
+            return ProductModel.GetCate();
+        }
+        public List<Supplier> GetSup()
+        {
+            return ProductModel.GetSup();
         }
     }
 }
