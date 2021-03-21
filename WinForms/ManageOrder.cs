@@ -14,5 +14,25 @@ namespace WinForms
         {
 
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManageOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

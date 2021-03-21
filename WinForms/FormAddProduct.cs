@@ -21,7 +21,7 @@ namespace WinForms
 
         public string CategoryID => cbCategory.SelectedValue.ToString();
 
-        public string SupplierID => cbSupplier.Text;
+        public string SupplierID => cbSupplier.SelectedValue.ToString();
 
         public float Price => float.Parse( txtPrice.Text);
 
@@ -36,6 +36,7 @@ namespace WinForms
             {
                 MessageBox.Show("OK");
                 this.Hide();
+                
             }
             else
             {

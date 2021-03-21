@@ -31,13 +31,14 @@ namespace WinForms
 
         private void ManageCar_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            this.Hide();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             FormAddProduct pop = new FormAddProduct();
             pop.Show();
+            LoadData();
         }
         private void LoadData()
         {
