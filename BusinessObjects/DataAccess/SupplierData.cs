@@ -10,6 +10,29 @@ namespace BusinessObjects.DataAccess
 {
     public class SupplierData
     {
+        public List<Supplier> getSupplier()
+        {
+            List<Supplier> list = null;
+            try
+            {
+                SqlDataReader rd = DataProvider.ExecuteQueryWithDataReader("GetAllSupplier");
+                while (rd.Read())
+                {
+                    Supplier sup = new Supplier(rd.GetString(0), rd.GetString(1), rd.GetString(2), true);
+                    if (list == null)
+                    {
+                        list = new List<Supplier>();
+                    }
+                    list.Add(sup);
+                }
+            }
+            catch (SqlException)
+            {
+                return null;
+            }
+            return list;
+        }
+
         public bool InsertSupplier(Supplier supplier)
         {
             bool res = false;
@@ -44,29 +67,5 @@ namespace BusinessObjects.DataAccess
             return res;
         }
 
-        public List<Supplier> GetAllSuppliers()
-        {
-            List<Supplier> list = new List<Supplier>();
-            SqlDataReader reader = DataProvider.ExecuteQueryWithDataReader("GetAllSupplier");
-            while (reader.Read())
-            {
-                list.Add(new Supplier(reader["SupplierID"].ToString(), reader["SupplierName"].ToString(), reader["Origin"].ToString(), (bool)reader["Status"]));
-            }
-            return list;
-        }
-
-        public Supplier GetSupplier(string SupplierID)
-        {
-            Supplier sup=null;
-            SqlParameter SupplierIDParam = new SqlParameter("@SupplierID", SupplierID);
-            SqlDataReader reader = DataProvider.ExecuteQueryWithDataReader("GetSupplier", SupplierIDParam);
-
-            if (reader.Read())
-            {
-                sup = new Supplier(SupplierID, reader["SupplierName"].ToString(), reader["Origin"].ToString(),(bool)reader["Status"]);
-            }
-
-            return sup;
-        }
     }
 }

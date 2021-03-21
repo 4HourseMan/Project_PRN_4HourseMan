@@ -31,11 +31,9 @@ namespace WinForms
         {
             this.btnManagePro = new System.Windows.Forms.Button();
             this.btnManageEmployee = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.ManageSupplier = new System.Windows.Forms.Button();
+            this.ManageOrder = new System.Windows.Forms.Button();
+            this.btnManageCus = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,71 +63,50 @@ namespace WinForms
             this.btnManageEmployee.UseVisualStyleBackColor = true;
             this.btnManageEmployee.Click += new System.EventHandler(this.btnManageEmployee_Click);
             // 
-            // button3
+            // ManageSupplier
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(489, 129);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 485);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Manage Supplier";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ManageSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ManageSupplier.Location = new System.Drawing.Point(489, 129);
+            this.ManageSupplier.Margin = new System.Windows.Forms.Padding(4);
+            this.ManageSupplier.Name = "ManageSupplier";
+            this.ManageSupplier.Size = new System.Drawing.Size(180, 485);
+            this.ManageSupplier.TabIndex = 2;
+            this.ManageSupplier.Text = "Manage Supplier";
+            this.ManageSupplier.UseVisualStyleBackColor = true;
+            this.ManageSupplier.Click += new System.EventHandler(this.ManageSupplier_Click);
             // 
-            // button4
+            // ManageOrder
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(720, 129);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(180, 485);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Manage Order";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ManageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ManageOrder.Location = new System.Drawing.Point(720, 129);
+            this.ManageOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.ManageOrder.Name = "ManageOrder";
+            this.ManageOrder.Size = new System.Drawing.Size(180, 485);
+            this.ManageOrder.TabIndex = 3;
+            this.ManageOrder.Text = "Manage Order";
+            this.ManageOrder.UseVisualStyleBackColor = true;
+            this.ManageOrder.Click += new System.EventHandler(this.ManageOrder_Click);
             // 
-            // button5
+            // btnManageCus
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.Location = new System.Drawing.Point(948, 129);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(180, 485);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Manage Customer Infor";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(1176, 129);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(180, 485);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "View Category";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.Location = new System.Drawing.Point(1404, 129);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(180, 485);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Manage Order Detail";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnManageCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnManageCus.Location = new System.Drawing.Point(948, 129);
+            this.btnManageCus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageCus.Name = "btnManageCus";
+            this.btnManageCus.Size = new System.Drawing.Size(180, 485);
+            this.btnManageCus.TabIndex = 4;
+            this.btnManageCus.Text = "Manage Customer Infor";
+            this.btnManageCus.UseVisualStyleBackColor = true;
+            this.btnManageCus.Click += new System.EventHandler(this.btnManageCus_Click);
             // 
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLogout.Location = new System.Drawing.Point(680, 674);
+            this.btnLogout.Location = new System.Drawing.Point(453, 676);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(263, 57);
@@ -143,13 +120,11 @@ namespace WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1623, 746);
+            this.ClientSize = new System.Drawing.Size(1192, 746);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnManageCus);
+            this.Controls.Add(this.ManageOrder);
+            this.Controls.Add(this.ManageSupplier);
             this.Controls.Add(this.btnManageEmployee);
             this.Controls.Add(this.btnManagePro);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -164,11 +139,9 @@ namespace WinForms
 
         private System.Windows.Forms.Button btnManagePro;
         private System.Windows.Forms.Button btnManageEmployee;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button ManageSupplier;
+        private System.Windows.Forms.Button ManageOrder;
+        private System.Windows.Forms.Button btnManageCus;
         private System.Windows.Forms.Button btnLogout;
     }
 }

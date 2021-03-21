@@ -33,5 +33,21 @@ namespace WinForms
             ManageEmployee manageEmployee = new ManageEmployee();
             manageEmployee.Show();
         }
+
+        private void ManageSupplier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManageOrder_Click(object sender, EventArgs e)
+        {
+            ManageOrder order = new ManageOrder();
+            order.Show();
+        }
+
+        private void btnManageCus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -123,6 +123,7 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Presenters\ManageSupplierPresenter.cs" />
     <Compile Include="Presenters\ManagerCarPresenter.cs" />
+    <Compile Include="Presenters\ManageSupplierPresenter.cs" />
     <Compile Include="Presenters\Presenter.cs" />
     <Compile Include="Presenters\UserPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -151,6 +152,7 @@
       <DependentUpon>ManageCar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IManageOrderView.cs" />
     <Compile Include="Views\IManageCarView.cs" />
     <Compile Include="Views\ISupplierView.cs" />
     <Compile Include="Views\IUserView.cs" />

@@ -5,11 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessObjects;
+using BusinessObjects.DataAccess;
+
 
 namespace WinForms.Models
 {
     public class SupplierModel : ISupplierModel
     {
+        
         SupplierData data = new SupplierData();
 
         public bool DeleteSupplier(Supplier supplier)
@@ -18,14 +22,9 @@ namespace WinForms.Models
             
         }
 
-        public List<Supplier> GetAllSuppliers()
+        public List<Supplier> GetSuppliers()
         {
-            return data.GetAllSuppliers();
-        }
-
-        public Supplier GetSupplier(string SupplierID)
-        {
-            return data.GetSupplier(SupplierID);
+            return data.getSupplier();
         }
 
         public bool InsertSupplier(Supplier supplier)
@@ -37,7 +36,7 @@ namespace WinForms.Models
         {
             return data.UpdateSupplier(supplier);
         }
-
-
+        
     }
+
 }

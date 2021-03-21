@@ -71,9 +71,11 @@ namespace WinForms
             this.tblCar.Location = new System.Drawing.Point(0, -1);
             this.tblCar.Margin = new System.Windows.Forms.Padding(4);
             this.tblCar.Name = "tblCar";
+            this.tblCar.ReadOnly = true;
             this.tblCar.RowHeadersWidth = 51;
             this.tblCar.Size = new System.Drawing.Size(1005, 532);
             this.tblCar.TabIndex = 0;
+            this.tblCar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblCar_CellClick);
             // 
             // txtProductID
             // 
@@ -215,6 +217,7 @@ namespace WinForms
             this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbCategory
             // 
