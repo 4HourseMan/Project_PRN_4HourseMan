@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace WinForms.Views
 {
-    public interface ISupplierView
+    public interface ISupplierView : IView
     {
         string SupID { get; }
         string SupName { get; }
         string Origin { get; }
 
+        bool loadData();
+        
     }
 }

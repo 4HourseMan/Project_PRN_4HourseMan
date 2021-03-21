@@ -32,5 +32,40 @@ namespace BusinessObjects.DataAccess
             }
             return list;
         }
+
+        public bool InsertSupplier(Supplier supplier)
+        {
+            bool res = false;
+            SqlParameter SupplierIDParam = new SqlParameter("@SupplierID", supplier.SupID);
+            SqlParameter SupplierNameParam = new SqlParameter("@SupplierName", supplier.SupName);
+            SqlParameter SupplierOriginParam = new SqlParameter("@Origin", supplier.Origin);
+            SqlParameter SupplierStatusParam = new SqlParameter("@Status", supplier.Status);
+
+            res = DataProvider.ExecuteNonQuery("InsertSupplier", SupplierIDParam, SupplierNameParam, SupplierOriginParam, SupplierStatusParam);
+
+            return res;
+        }
+        public bool UpdateSupplier(Supplier supplier)
+        {
+            bool res = false;
+            SqlParameter SupplierIDParam = new SqlParameter("@SupplierID", supplier.SupID);
+            SqlParameter SupplierNameParam = new SqlParameter("@SupplierName", supplier.SupName);
+            SqlParameter SupplierOriginParam = new SqlParameter("@Origin", supplier.Origin);
+            SqlParameter SupplierStatusParam = new SqlParameter("@Status", supplier.Status);
+
+            res = DataProvider.ExecuteNonQuery("UpdateSupplier", SupplierIDParam, SupplierNameParam, SupplierOriginParam, SupplierStatusParam);
+
+            return res;
+        }
+        public bool DeleteSupplier(Supplier supplier)
+        {
+            bool res = false;
+            SqlParameter SupplierIDParam = new SqlParameter("@SupplierID", supplier.SupID);          
+
+            res = DataProvider.ExecuteNonQuery("DeleteSupplier", SupplierIDParam);
+
+            return res;
+        }
+
     }
 }

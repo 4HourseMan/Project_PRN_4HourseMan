@@ -122,6 +122,7 @@
     <Compile Include="Models\SupplierModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Presenters\ManagerCarPresenter.cs" />
+    <Compile Include="Presenters\ManageSupplierPresenter.cs" />
     <Compile Include="Presenters\Presenter.cs" />
     <Compile Include="Presenters\UserPresenter.cs" />
     <Compile Include="Program.cs" />
