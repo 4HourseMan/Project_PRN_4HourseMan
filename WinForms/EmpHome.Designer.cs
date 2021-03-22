@@ -34,7 +34,7 @@ namespace WinForms
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewCar = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -99,17 +99,18 @@ namespace WinForms
             this.button2.Text = "View Category";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnViewCar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(15, 98);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 479);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "View Car";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnViewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnViewCar.Location = new System.Drawing.Point(15, 98);
+            this.btnViewCar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewCar.Name = "btnViewCar";
+            this.btnViewCar.Size = new System.Drawing.Size(232, 479);
+            this.btnViewCar.TabIndex = 8;
+            this.btnViewCar.Text = "View Car";
+            this.btnViewCar.UseVisualStyleBackColor = true;
+            this.btnViewCar.Click += new System.EventHandler(this.btnViewCar_Click);
             // 
             // button6
             // 
@@ -135,7 +136,7 @@ namespace WinForms
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnViewCar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmpHome";
             this.Text = "Chain Hang Low - Employee";
@@ -151,7 +152,7 @@ namespace WinForms
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewCar;
         private System.Windows.Forms.Button button6;
     }
 }

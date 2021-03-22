@@ -107,5 +107,15 @@ namespace WinForms
                 MessageBox.Show("Not OK");
             }
         }
+
+        private void txtSearchName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

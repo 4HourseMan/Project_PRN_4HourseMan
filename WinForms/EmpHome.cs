@@ -21,5 +21,11 @@ namespace WinForms
             this.Hide();
             login.Show();
         }
+
+        private void btnViewCar_Click(object sender, EventArgs e)
+        {
+            FormViewProduct product = new FormViewProduct();
+            product.Show();
+        }
     }
 }

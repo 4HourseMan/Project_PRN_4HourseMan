@@ -64,6 +64,7 @@ namespace WinForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 534);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tblCar
             // 
@@ -241,6 +242,7 @@ namespace WinForms
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Size = new System.Drawing.Size(192, 22);
             this.txtSearchName.TabIndex = 24;
+            this.txtSearchName.TextChanged += new System.EventHandler(this.txtSearchName_TextChanged);
             // 
             // btnSearch
             // 
