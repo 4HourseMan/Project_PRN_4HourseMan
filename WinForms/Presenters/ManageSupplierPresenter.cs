@@ -11,8 +11,7 @@ using System.Collections.Generic;
 
 public class ManageSupplierPresenter : Presenter<ISupplierView>
 {
-    class ManageSupplierPresenter : Presenter<ISupplierView> 
-    {
+
     public ManageSupplierPresenter(ISupplierView view) : base(view) { }
 
     public bool InsertSupplier()
@@ -21,6 +20,8 @@ public class ManageSupplierPresenter : Presenter<ISupplierView>
         string SupplierName = View.SupName;
         string SupplierOrigin = View.Origin;
         bool SupplierStatus = true;
+
+        Supplier sup = new Supplier(SupplierID, SupplierName, SupplierOrigin, SupplierStatus);
 
         return SupplierModel.InsertSupplier(sup);
     }
