@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using WinForms.Views;
 using WinForms.Models;
 using BusinessObjects;
@@ -7,6 +11,8 @@ using System.Collections.Generic;
 
 public class ManageSupplierPresenter : Presenter<ISupplierView>
 {
+    class ManageSupplierPresenter : Presenter<ISupplierView> 
+    {
     public ManageSupplierPresenter(ISupplierView view) : base(view) { }
 
     public bool InsertSupplier()
@@ -16,7 +22,6 @@ public class ManageSupplierPresenter : Presenter<ISupplierView>
         string SupplierOrigin = View.Origin;
         bool SupplierStatus = true;
 
-        Supplier sup = new Supplier(SupplierID, SupplierName, SupplierOrigin, SupplierStatus);
         return SupplierModel.InsertSupplier(sup);
     }
 
