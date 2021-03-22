@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using WinForms.Presenters;
 using WinForms.Views;
+using System.Text.RegularExpressions;
 
 namespace WinForms
 {
@@ -40,8 +41,69 @@ namespace WinForms
             pop.Show();
             LoadData();
         }
+
+        private bool checkInt(string num)
+        {
+            bool check = true;
+            try
+            {
+                int alo = int.Parse(num);
+                if (alo <= 0)
+                {
+                    check = false;
+                }
+            }
+            catch (Exception)
+            {
+                check = false;
+            }
+            return check;
+        }
+
+        private bool checkFloat(string num)
+        {
+            bool check = true;
+            try
+            {
+                float alo = float.Parse(num);
+                if (alo <= 0)
+                {
+                    check = false;
+                }
+            }
+            catch (Exception)
+            {
+                check = false;
+            }
+            return check;
+        }
+
+        private bool checkString(string stri, int num)
+        {
+            bool check = true;
+            if (stri.Trim().Length > num)
+            {
+                check = false;
+            }
+            return check;
+        }
+
+        private bool checkID(string stri, int num)
+        {
+            bool check = true;
+            if (stri.Trim().Length > num)
+            {
+                check = false;
+            }
+            if (!Regex.IsMatch(stri, "(?i)^(?=.*[a-z])[a-z0-9]{8,20}$"))
+            {
+                check = false;
+            }
+            return check;
+        }
         private void LoadData()
         {
+
             MCP = new ManagerCarPresenter(this);
             List<Product> list = MCP.SearchProduct();
             tblCar.DataSource = list;
@@ -66,15 +128,21 @@ namespace WinForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            MCP = new ManagerCarPresenter(this);
-            if (MCP.UpdateProduct())
+
+            bool check = true;
+            
+            if (check)
             {
-                MessageBox.Show("OK");
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Not OK");
+                MCP = new ManagerCarPresenter(this);
+                if (MCP.UpdateProduct())
+                {
+                    MessageBox.Show("OK");
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Not OK");
+                }
             }
         }
 
