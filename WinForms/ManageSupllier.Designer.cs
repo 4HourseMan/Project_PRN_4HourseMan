@@ -58,6 +58,7 @@ namespace WinForms
             this.btnDelete.TabIndex = 53;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -69,6 +70,7 @@ namespace WinForms
             this.btnUpdate.TabIndex = 52;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 
@@ -80,7 +82,7 @@ namespace WinForms
             this.btnCreate.TabIndex = 51;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
-            
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // chkSupplierStatus
             // 
@@ -185,6 +187,7 @@ namespace WinForms
             this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSupplier.Size = new System.Drawing.Size(445, 432);
             this.dgvSupplier.TabIndex = 0;
+            this.dgvSupplier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellClick);
             // 
             // ManageSupllier
             // 
@@ -206,6 +209,8 @@ namespace WinForms
             this.Controls.Add(this.panel1);
             this.Name = "ManageSupllier";
             this.Text = "Chain Hang Low - Manage Supllier";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManageSupllier_FormClosing);
+            this.Load += new System.EventHandler(this.ManageSupllier_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.ResumeLayout(false);

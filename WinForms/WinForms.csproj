@@ -146,9 +146,11 @@
     </Compile>
     <Compile Include="ManageCar.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ManageCar.Designer.cs">
       <DependentUpon>ManageCar.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IManageOrderView.cs" />
@@ -194,6 +196,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageCar.resx">
       <DependentUpon>ManageCar.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

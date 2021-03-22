@@ -12,7 +12,8 @@ namespace WinForms.Views
         string SupName { get; }
         string Origin { get; }
 
-        bool loadData();
-        
+        void loadData();
+
+        void ShowMessage(string message);
     }
 }

@@ -36,7 +36,8 @@ namespace WinForms
 
         private void ManageSupplier_Click(object sender, EventArgs e)
         {
-
+            ManageSupllier supplier = new ManageSupllier();
+            supplier.Show();
         }
 
         private void ManageOrder_Click(object sender, EventArgs e)
