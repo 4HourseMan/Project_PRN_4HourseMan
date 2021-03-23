@@ -27,5 +27,11 @@ namespace WinForms
             FormViewProduct product = new FormViewProduct();
             product.Show();
         }
+
+        private void btnViewSup_Click(object sender, EventArgs e)
+        {
+            FormViewSup sup = new FormViewSup();
+            sup.Show();
+        }
     }
 }

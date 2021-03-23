@@ -32,7 +32,7 @@ namespace WinForms
             this.btnLogout = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnViewSup = new System.Windows.Forms.Button();
             this.btnViewCar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -73,17 +73,18 @@ namespace WinForms
             this.button4.Text = "Manage Order";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnViewSup
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(552, 98);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 479);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "View Supplier";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnViewSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewSup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnViewSup.Location = new System.Drawing.Point(552, 98);
+            this.btnViewSup.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewSup.Name = "btnViewSup";
+            this.btnViewSup.Size = new System.Drawing.Size(232, 479);
+            this.btnViewSup.TabIndex = 10;
+            this.btnViewSup.Text = "View Supplier";
+            this.btnViewSup.UseVisualStyleBackColor = true;
+            this.btnViewSup.Click += new System.EventHandler(this.btnViewSup_Click);
             // 
             // btnViewCar
             // 
@@ -107,7 +108,7 @@ namespace WinForms
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnViewSup);
             this.Controls.Add(this.btnViewCar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmpHome";
@@ -122,7 +123,7 @@ namespace WinForms
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnViewSup;
         private System.Windows.Forms.Button btnViewCar;
     }
 }
