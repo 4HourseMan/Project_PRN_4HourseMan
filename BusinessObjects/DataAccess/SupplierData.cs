@@ -18,12 +18,15 @@ namespace BusinessObjects.DataAccess
                 SqlDataReader rd = DataProvider.ExecuteQueryWithDataReader("GetAllSupplier");
                 while (rd.Read())
                 {
-                    Supplier sup = new Supplier(rd.GetString(0), rd.GetString(1), rd.GetString(2), true);
-                    if (list == null)
+                    if (rd.HasRows)
                     {
-                        list = new List<Supplier>();
+                        Supplier sup = new Supplier(rd.GetString(0), rd.GetString(1), rd.GetString(2), true);
+                        if (list == null)
+                        {
+                            list = new List<Supplier>();
+                        }
+                        list.Add(sup);
                     }
-                    list.Add(sup);
                 }
             }
             catch (SqlException)

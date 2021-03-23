@@ -11,19 +11,19 @@ namespace WinForms
     public partial class ManageCar : Form, IManageCarView
     {
         private ManagerCarPresenter MCP;
-        public string ProductID => txtProductID.Text;
+        public string ProductID => txtProductID.Text.Trim();
 
-        public string ProductName1 => txtProductName.Text;
+        public string ProductName1 => txtProductName.Text.Trim();
 
         public string CategoryID => cbCategory.SelectedValue.ToString();
 
         public string SupplierID => cbSupplier.SelectedValue.ToString();
 
-        public float Price => float.Parse(txtPrice.Text);
+        public float Price => float.Parse(txtPrice.Text.Trim());
 
-        public int Quantity => Int32.Parse(txtQuantity.Text);
+        public int Quantity => Int32.Parse(txtQuantity.Text.Trim());
 
-        public string SearchName => txtSearchName.Text;
+        public string SearchName => txtSearchName.Text.Trim();
 
         public ManageCar()
         {
@@ -38,7 +38,7 @@ namespace WinForms
         private void btnCreate_Click(object sender, EventArgs e)
         {
             FormAddProduct pop = new FormAddProduct();
-            pop.Show();
+            pop.ShowDialog();
             LoadData();
         }
 
@@ -88,14 +88,10 @@ namespace WinForms
             return check;
         }
 
-        private bool checkID(string stri, int num)
+        private bool checkID(string stri)
         {
             bool check = true;
-            if (stri.Trim().Length > num)
-            {
-                check = false;
-            }
-            if (!Regex.IsMatch(stri, "(?i)^(?=.*[a-z])[a-z0-9]{8,20}$"))
+            if (!Regex.IsMatch(stri, "(?i)^(?=.*[a-z])[a-z0-9]{1,10}$"))
             {
                 check = false;
             }
@@ -115,6 +111,13 @@ namespace WinForms
             cbSupplier.DataSource = listS;
             cbSupplier.DisplayMember = "SupName";
             cbSupplier.ValueMember = "SupID";
+            txtProductID.Text = "";
+            txtProductName.Text = "";
+            txtPrice.Text = "";
+            txtQuantity.Text = "";
+            txtSearchName.Text = "";
+            txtCreateDate.Text = "";
+
         }
         private void ManageCar_Load(object sender, EventArgs e)
         {
@@ -128,20 +131,45 @@ namespace WinForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-            bool check = true;
-            
-            if (check)
+            string ProductName1 = txtProductName.Text.Trim();
+            string Price = txtPrice.Text.Trim();
+            string Quantity = txtQuantity.Text.Trim();
+            if ( ProductName1.Equals("") || Price.Equals("") || Quantity.Equals(""))
             {
-                MCP = new ManagerCarPresenter(this);
-                if (MCP.UpdateProduct())
+                MessageBox.Show("Please fill all blank");
+            }
+            else
+            {
+                string err = "";
+                if (!checkString(ProductName1 , 50))
                 {
-                    MessageBox.Show("OK");
-                    LoadData();
+                    err += "Name length <= 50\n";
+                }
+                if (!checkInt(Quantity))
+                {
+                    err += "Quantity is int number\n";
+                }
+                if (!checkFloat(Price))
+                {
+                    err += "Price is number\n";
+                }
+                if (err.Equals(""))
+                {
+
+                    MCP = new ManagerCarPresenter(this);
+                    if (MCP.UpdateProduct())
+                    {
+                        MessageBox.Show("OK");
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not OK");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Not OK");
+                    MessageBox.Show(err);
                 }
             }
         }
