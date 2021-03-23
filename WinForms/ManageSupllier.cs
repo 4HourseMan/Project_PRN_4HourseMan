@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using WinForms.Views;
 
@@ -14,12 +15,30 @@ namespace WinForms
         {
             InitializeComponent();
         }
+        private bool checkString(string stri, int num)
+        {
+            bool check = true;
+            if (stri.Trim().Length > num)
+            {
+                check = false;
+            }
+            return check;
+        }
 
-        public string SupID => txtSupplierID.Text;
+        private bool checkID(string stri)
+        {
+            bool check = true;
+            if (!Regex.IsMatch(stri, "(?i)^(?=.*[a-z])[a-z0-9]{1,10}$"))
+            {
+                check = false;
+            }
+            return check;
+        }
+        public string SupID => txtSupplierID.Text.Trim();
 
-        public string SupName => txtSupplierName.Text;
+        public string SupName => txtSupplierName.Text.Trim();
 
-        public string Origin => txtSupplierOrigin.Text;
+        public string Origin => txtSupplierOrigin.Text.Trim();
 
         public bool Status => chkSupplierStatus.Checked;
 
@@ -44,15 +63,49 @@ namespace WinForms
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            _presenter = new ManageSupplierPresenter(this);
-            if (_presenter.InsertSupplier())
+            string ID = txtSupplierID.Text.Trim();
+            string Name = txtSupplierName.Text.Trim();
+            string Origin = txtSupplierOrigin.Text.Trim();
+            if (ID.Equals("") || Name.Equals("") || Origin.Equals(""))
             {
-                ShowMessage("Added Success");
+                MessageBox.Show("Please fill all blank");
             }
             else
             {
-                ShowMessage("Failed to Add");
+                string err = "";
+                if (!checkID(ID))
+                {
+                    err += "Wrong ID format\n";
+                }
+                if (!checkString(Name, 50))
+                {
+                    err += "Name length <= 50\n";
+                }
+                if (!checkString(Origin, 50))
+                {
+                    err += "Origin length <= 50\n";
+                }
+                if (err.Equals(""))
+                {
+
+                    _presenter = new ManageSupplierPresenter(this);
+                    if (_presenter.InsertSupplier())
+                    {
+                        ShowMessage("Added Success");
+                    }
+                    else
+                    {
+                        ShowMessage("Failed to Add");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(err);
+                }
             }
+
+
+
         }
 
         public void ShowMessage(string message)
@@ -62,15 +115,46 @@ namespace WinForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            _presenter = new ManageSupplierPresenter(this);
-            if (_presenter.UpdateSupplier())
+
+
+            string Name = txtSupplierName.Text.Trim();
+            string Origin = txtSupplierOrigin.Text.Trim();
+            if (Name.Equals("") || Origin.Equals(""))
             {
-                ShowMessage("Update Success");
+                MessageBox.Show("Please fill all blank");
             }
             else
             {
-                ShowMessage("Failed to Update");
+                string err = "";
+
+                if (!checkString(Name, 50))
+                {
+                    err += "Name length <= 50\n";
+                }
+                if (!checkString(Origin, 50))
+                {
+                    err += "Origin length <= 50\n";
+                }
+                if (err.Equals(""))
+                {
+
+                    _presenter = new ManageSupplierPresenter(this);
+                    if (_presenter.UpdateSupplier())
+                    {
+                        ShowMessage("Update Success");
+                    }
+                    else
+                    {
+                        ShowMessage("Failed to Update");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(err);
+                }
             }
+
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

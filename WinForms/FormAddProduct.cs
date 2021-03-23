@@ -135,11 +135,6 @@ namespace WinForms
                     MessageBox.Show(err);
                 }
             }
-
-
-
-
-
         }
 
         private void FormAddProduct_Load(object sender, EventArgs e)

@@ -54,9 +54,8 @@ namespace BusinessObjects.DataAccess
             SqlParameter SupplierIDParam = new SqlParameter("@SupplierID", supplier.SupID);
             SqlParameter SupplierNameParam = new SqlParameter("@SupplierName", supplier.SupName);
             SqlParameter SupplierOriginParam = new SqlParameter("@Origin", supplier.Origin);
-            SqlParameter SupplierStatusParam = new SqlParameter("@Status", supplier.Status);
 
-            res = DataProvider.ExecuteNonQuery("UpdateSupplier", SupplierIDParam, SupplierNameParam, SupplierOriginParam, SupplierStatusParam);
+            res = DataProvider.ExecuteNonQuery("UpdateSupplier", SupplierIDParam, SupplierNameParam, SupplierOriginParam);
 
             return res;
         }
