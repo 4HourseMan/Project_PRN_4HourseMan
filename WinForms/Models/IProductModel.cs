@@ -10,9 +10,10 @@ namespace WinForms.Models
     public interface IProductModel
     {
         bool AddProduct(Product p);
-        bool DeleteProduct(String id);
+        bool DeleteProduct(string id);
         bool UpdateProduct(Product p);
-        List<Product> SearchProduct(String name, bool status);
+        List<Product> SearchProduct(string name);
+        List<Product> SearchProductBySomeThing(string sup, string cate, string name);
         List<Category> GetCate();
         List<Supplier> GetSup();
     }
