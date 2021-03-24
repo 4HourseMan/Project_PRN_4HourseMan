@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="DataAccess\DetailData.cs" />
+    <Compile Include="DataAccess\OrderData.cs" />
     <Compile Include="DataAccess\CustomerData.cs" />
     <Compile Include="DataAccess\ProductData.cs" />
     <Compile Include="DataAccess\SupplierData.cs" />
