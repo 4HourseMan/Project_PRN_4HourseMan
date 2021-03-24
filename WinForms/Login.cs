@@ -40,7 +40,7 @@ namespace WinForms
             {
                 if (user.RoleID.Contains("AD"))
                 {
-                    AdHome adHome = new AdHome();
+                    AdHome adHome = new AdHome(user.UserID);
                     this.Hide();
                     adHome.Show();
                 }

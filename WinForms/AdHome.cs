@@ -5,10 +5,14 @@ namespace WinForms
 {
     public partial class AdHome : Form
     {
-        public AdHome()
+
+        string UID;
+        public AdHome(string userID)
         {
             InitializeComponent();
             this.CenterToScreen();
+            this.UID = userID;
+            lbUID.Text = UID;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
