@@ -20,6 +20,9 @@ namespace WinForms
         public string Password => txtPassword.Text.Trim();
         public string Email => txtEmail.Text.Trim();
         public bool Status => true;
+
+        public string SearchName => throw new NotImplementedException();
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             userPresenter = new UserPresenter(this);

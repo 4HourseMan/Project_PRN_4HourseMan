@@ -117,7 +117,6 @@ namespace WinForms
             txtQuantity.Text = "";
             txtSearchName.Text = "";
             txtCreateDate.Text = "";
-
         }
         private void ManageCar_Load(object sender, EventArgs e)
         {
@@ -205,11 +204,6 @@ namespace WinForms
         }
 
         private void txtSearchName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

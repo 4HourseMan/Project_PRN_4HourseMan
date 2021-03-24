@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using WinForms.Presenters;
@@ -10,13 +11,16 @@ namespace WinForms
     {
         UserPresenter userPresenter;
         public string UserID => txtUserID.Text.Trim();
-        public string UserName => txtUserNameSearch.Text.Trim();
+        public string UserName => txtUserName.Text.Trim();
         public string Address => txtAddress.Text.Trim();
         public string Phone => txtPhone.Text.Trim();
         public string RoleID => "EMP";
         public string Password => txtPassword.Text.Trim();
         public string Email => txtEmail.Text.Trim();
         public bool Status => RadioTrue.Checked ? true : false;
+
+        public string SearchName => txtUserNameSearch.Text.Trim();
+
         public ManageEmployee()
         {
             InitializeComponent();
@@ -31,39 +35,17 @@ namespace WinForms
             }
             else
             {
-                txtUserID.Enabled = false;
-                txtUserName.Enabled = false;
-                txtAddress.Enabled = false;
-                txtPhone.Enabled = false;
-                txtPassword.Enabled = false;
-                txtEmail.Enabled = false;
-                txtRoleID.Enabled = false;
-                RadioTrue.Enabled = false;
-                RadioFalse.Enabled = false;
-
+                txtUserID.ReadOnly = true;
                 dgvEmployeeList.DataSource = list;
-                txtUserID.DataBindings.Clear();
-                txtUserName.DataBindings.Clear();
-                txtAddress.DataBindings.Clear();
-                txtPhone.DataBindings.Clear();
-                txtPassword.DataBindings.Clear();
-                txtEmail.DataBindings.Clear();
-                txtRoleID.DataBindings.Clear();
-                txtUserID.DataBindings.Add("Text", list, "UserID");
-                txtUserName.DataBindings.Add("Text", list, "UserName");
-                txtAddress.DataBindings.Add("Text", list, "Address");
-                txtPhone.DataBindings.Add("Text", list, "Phone");
-                txtPassword.DataBindings.Add("Text", list, "Password");
-                txtEmail.DataBindings.Add("Text", list, "Email");
-                txtRoleID.DataBindings.Add("Text", list, "RoleID");
-                dgvEmployeeList.ReadOnly = true;
-
-                RadioTrue.DataBindings.Clear();
-                var status = new Binding("Checked", list, "Status");
-                status.Format += (s, args) => args.Value = ((bool)args.Value) == true;
-                status.Parse += (s, args) => args.Value = (bool)args.Value ? true : false;
-                RadioTrue.DataBindings.Add(status);
-                RadioTrue.CheckedChanged += (s, args) => RadioFalse.Checked = !RadioTrue.Checked;
+                txtUserID.Text = "";
+                txtUserName.Text = "";
+                txtAddress.Text = "";
+                txtPhone.Text = "";
+                txtPassword.Text = "";
+                txtEmail.Text = "";
+                txtRoleID.Text = "";
+                RadioTrue.Checked = false;
+                RadioFalse.Checked = false;
             }
         }
         private void ManageEmployee_Load(object sender, System.EventArgs e)
@@ -98,10 +80,39 @@ namespace WinForms
 
         private void btnUpdate_Click(object sender, System.EventArgs e)
         {
-            User user = new User(UserID, txtUserName.Text, Email, Address, Phone, RoleID, Password, Status);
-            FormUpdateEmployee formUpdateEmployee = new FormUpdateEmployee() { user = user };
-            this.Hide();
-            formUpdateEmployee.Show();
+            bool check = userPresenter.UpdateEmployee();
+            if (check)
+            {
+                LoadEmployee();
+                MessageBox.Show("Update successful!");
+            }
+            else
+            {
+                MessageBox.Show("Update failed!");
+            }
+        }
+
+        private void dgvEmployeeList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvEmployeeList.Rows[e.RowIndex];
+                txtUserID.Text = row.Cells[0].Value.ToString();
+                txtUserName.Text = row.Cells[1].Value.ToString();
+                txtEmail.Text = row.Cells[2].Value.ToString();
+                txtAddress.Text = row.Cells[3].Value.ToString();
+                txtPhone.Text = row.Cells[4].Value.ToString();
+                txtRoleID.Text = row.Cells[5].Value.ToString();
+                txtPassword.Text = row.Cells[6].Value.ToString();
+                if (row.Cells[7].Value.ToString().Equals("True"))
+                {
+                    RadioTrue.Checked = true;
+                }
+                else
+                {
+                    RadioFalse.Checked = true;
+                }
+            }
         }
     }
 }

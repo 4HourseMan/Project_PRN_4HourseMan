@@ -16,19 +16,21 @@ namespace WinForms
 
         public string UserID => txtUserID.Text.Trim();
 
-        public string UserName => "";
+        public string UserName => throw new NotImplementedException();
 
-        public string Address => "";
+        public string Address => throw new NotImplementedException();
 
-        public string Phone => "";
+        public string Phone => throw new NotImplementedException();
 
-        public string RoleID => "";
+        public string RoleID => throw new NotImplementedException();
 
         public string Password => txtPassword.Text.Trim();
 
-        public string Email => "";
+        public string Email => throw new NotImplementedException();
 
         public bool Status => throw new NotImplementedException();
+
+        public string SearchName => throw new NotImplementedException();
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -64,6 +66,22 @@ namespace WinForms
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void txtUserID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }

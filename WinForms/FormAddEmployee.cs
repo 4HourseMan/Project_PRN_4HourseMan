@@ -37,6 +37,8 @@ namespace WinForms
 
         public bool Status => true;
 
+        public string SearchName => throw new NotImplementedException();
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             bool check = userPresenter.InsertEmployee();

@@ -10,6 +10,7 @@ namespace WinForms.Views
     {
         string UserID { get; }
         string UserName { get; }
+        string SearchName { get; }
         string Address { get; }
         string Phone { get; }
         string RoleID { get; }

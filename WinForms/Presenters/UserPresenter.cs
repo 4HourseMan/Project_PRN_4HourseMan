@@ -47,7 +47,7 @@ namespace WinForms.Presenters
         }
         public List<User> GetAllEmployee()
         {
-            string UserName = View.UserName;
+            string UserName = View.SearchName;
             return UserModel.GetEmployee(UserName);
         }
     }
