@@ -7,13 +7,14 @@ namespace WinForms.Presenters
     {
         protected static IUserModel UserModel { get; private set; }
         protected static IProductModel ProductModel { get; private set; }
-
         protected static ISupplierModel SupplierModel { get; private set; }
+        protected static ICustomerModel CustomerModel { get; private set; }
         static Presenter()
         {
             UserModel = new UserModel();
             ProductModel = new ProductModel();
             SupplierModel = new SupplierModel();
+            CustomerModel = new CustomerModel();
         }
 
         protected T View { get; private set; }

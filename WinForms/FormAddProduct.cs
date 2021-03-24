@@ -87,8 +87,6 @@ namespace WinForms
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
-
             string ProductID = txtProductID.Text.Trim();
             string ProductName1 = txtProductName.Text.Trim();
             string Price = txtPrice.Text.Trim();

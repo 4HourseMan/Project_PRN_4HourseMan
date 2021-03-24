@@ -49,7 +49,8 @@ namespace WinForms
 
         private void btnManageCus_Click(object sender, EventArgs e)
         {
-
+            ManageCustomerInfor customerInfor = new ManageCustomerInfor();
+            customerInfor.Show();
         }
     }
 }

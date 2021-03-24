@@ -47,6 +47,7 @@ namespace WinForms
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(327, 35);
             this.txtUserID.TabIndex = 0;
+            this.txtUserID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserID_KeyDown);
             // 
             // txtPassword
             // 
@@ -56,6 +57,7 @@ namespace WinForms
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(327, 35);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // label1
             // 

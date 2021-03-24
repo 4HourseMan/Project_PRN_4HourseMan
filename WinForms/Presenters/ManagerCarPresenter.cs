@@ -48,7 +48,20 @@ namespace WinForms.Presenters
             {
                 ProductName = "%%";
             }
-            return ProductModel.SearchProduct(ProductName, true);
+            return ProductModel.SearchProduct(ProductName);
+        }
+
+        public List<Product> SearchProductBySomeThing()
+        {
+            string ProductName = "%" + View.SearchName + "%";
+            string sup = "%" + View.SupplierID + "%";
+            string cate = "%" + View.CategoryID + "%";
+
+            if (ProductName == null)
+            {
+                ProductName = "%%";
+            }
+            return ProductModel.SearchProductBySomeThing(sup, cate, ProductName);
         }
         public List<Category> GetCate()
         {
