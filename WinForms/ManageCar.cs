@@ -28,6 +28,7 @@ namespace WinForms
         public ManageCar()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void ManageCar_FormClosing(object sender, FormClosingEventArgs e)

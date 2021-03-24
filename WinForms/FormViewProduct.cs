@@ -34,6 +34,7 @@ namespace WinForms
         public FormViewProduct()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void LoadData()

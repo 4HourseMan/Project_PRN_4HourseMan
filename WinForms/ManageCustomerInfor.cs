@@ -7,6 +7,7 @@ namespace WinForms
         public ManageCustomerInfor()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
     }
 }

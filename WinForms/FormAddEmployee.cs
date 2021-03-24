@@ -18,6 +18,7 @@ namespace WinForms
         public FormAddEmployee()
         {
             InitializeComponent();
+            this.CenterToScreen();
             userPresenter = new UserPresenter(this);
         }
 
@@ -51,5 +52,7 @@ namespace WinForms
                 MessageBox.Show("Add Employee Failed!");
             }
         }
+
+        
     }
 }

@@ -14,6 +14,7 @@ namespace WinForms
         public ManageSupllier()
         {
             InitializeComponent();
+            this.CenterToScreen();
             chkSupplierStatus.AutoCheck = false;
         }
         private bool checkString(string stri, int num)

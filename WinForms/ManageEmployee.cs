@@ -20,6 +20,7 @@ namespace WinForms
         public ManageEmployee()
         {
             InitializeComponent();
+            this.CenterToScreen();
             userPresenter = new UserPresenter(this);
         }
         public void LoadEmployee()

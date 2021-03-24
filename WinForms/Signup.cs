@@ -11,6 +11,7 @@ namespace WinForms
         public Signup()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
         public string UserID => txtUserID.Text.Trim();
         public string UserName => txtUserName.Text.Trim();
@@ -34,5 +35,7 @@ namespace WinForms
             }
 
         }
+
+        
     }
 }

@@ -37,6 +37,7 @@ namespace WinForms
         public FormUpdateEmployee()
         {
             InitializeComponent();
+            this.CenterToScreen();
             userPresenteer = new UserPresenter(this);
         }
 

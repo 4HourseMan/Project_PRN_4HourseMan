@@ -29,26 +29,39 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblSup = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tblSup)).BeginInit();
             this.SuspendLayout();
             // 
             // tblSup
             // 
+            this.tblSup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblSup.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tblSup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblSup.Location = new System.Drawing.Point(82, 39);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblSup.DefaultCellStyle = dataGridViewCellStyle1;
+            this.tblSup.Location = new System.Drawing.Point(0, 0);
+            this.tblSup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tblSup.Name = "tblSup";
             this.tblSup.RowHeadersWidth = 51;
             this.tblSup.RowTemplate.Height = 24;
-            this.tblSup.Size = new System.Drawing.Size(608, 325);
+            this.tblSup.Size = new System.Drawing.Size(602, 369);
             this.tblSup.TabIndex = 0;
             // 
             // FormViewSup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.tblSup);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormViewSup";
             this.Text = "FormViewSup";
             this.Load += new System.EventHandler(this.FormViewSup_Load);

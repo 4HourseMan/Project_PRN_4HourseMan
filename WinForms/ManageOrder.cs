@@ -8,6 +8,7 @@ namespace WinForms
         public ManageOrder()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void label6_Click(object sender, EventArgs e)

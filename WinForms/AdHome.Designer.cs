@@ -39,12 +39,11 @@ namespace WinForms
             // 
             // btnManagePro
             // 
-            this.btnManagePro.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagePro.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManagePro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnManagePro.Location = new System.Drawing.Point(40, 129);
-            this.btnManagePro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManagePro.Location = new System.Drawing.Point(37, 52);
             this.btnManagePro.Name = "btnManagePro";
-            this.btnManagePro.Size = new System.Drawing.Size(180, 485);
+            this.btnManagePro.Size = new System.Drawing.Size(135, 394);
             this.btnManagePro.TabIndex = 0;
             this.btnManagePro.Text = "Manage Car";
             this.btnManagePro.UseVisualStyleBackColor = true;
@@ -52,12 +51,11 @@ namespace WinForms
             // 
             // btnManageEmployee
             // 
-            this.btnManageEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEmployee.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnManageEmployee.Location = new System.Drawing.Point(267, 129);
-            this.btnManageEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageEmployee.Location = new System.Drawing.Point(207, 52);
             this.btnManageEmployee.Name = "btnManageEmployee";
-            this.btnManageEmployee.Size = new System.Drawing.Size(180, 485);
+            this.btnManageEmployee.Size = new System.Drawing.Size(135, 394);
             this.btnManageEmployee.TabIndex = 1;
             this.btnManageEmployee.Text = "Manage Employee";
             this.btnManageEmployee.UseVisualStyleBackColor = true;
@@ -65,12 +63,11 @@ namespace WinForms
             // 
             // ManageSupplier
             // 
-            this.ManageSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageSupplier.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ManageSupplier.Location = new System.Drawing.Point(489, 129);
-            this.ManageSupplier.Margin = new System.Windows.Forms.Padding(4);
+            this.ManageSupplier.Location = new System.Drawing.Point(374, 52);
             this.ManageSupplier.Name = "ManageSupplier";
-            this.ManageSupplier.Size = new System.Drawing.Size(180, 485);
+            this.ManageSupplier.Size = new System.Drawing.Size(135, 394);
             this.ManageSupplier.TabIndex = 2;
             this.ManageSupplier.Text = "Manage Supplier";
             this.ManageSupplier.UseVisualStyleBackColor = true;
@@ -78,12 +75,11 @@ namespace WinForms
             // 
             // ManageOrder
             // 
-            this.ManageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageOrder.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ManageOrder.Location = new System.Drawing.Point(720, 129);
-            this.ManageOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.ManageOrder.Location = new System.Drawing.Point(547, 52);
             this.ManageOrder.Name = "ManageOrder";
-            this.ManageOrder.Size = new System.Drawing.Size(180, 485);
+            this.ManageOrder.Size = new System.Drawing.Size(135, 394);
             this.ManageOrder.TabIndex = 3;
             this.ManageOrder.Text = "Manage Order";
             this.ManageOrder.UseVisualStyleBackColor = true;
@@ -91,12 +87,11 @@ namespace WinForms
             // 
             // btnManageCus
             // 
-            this.btnManageCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCus.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnManageCus.Location = new System.Drawing.Point(948, 129);
-            this.btnManageCus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageCus.Location = new System.Drawing.Point(718, 52);
             this.btnManageCus.Name = "btnManageCus";
-            this.btnManageCus.Size = new System.Drawing.Size(180, 485);
+            this.btnManageCus.Size = new System.Drawing.Size(135, 394);
             this.btnManageCus.TabIndex = 4;
             this.btnManageCus.Text = "Manage Customer Infor";
             this.btnManageCus.UseVisualStyleBackColor = true;
@@ -104,12 +99,11 @@ namespace WinForms
             // 
             // btnLogout
             // 
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLogout.Location = new System.Drawing.Point(453, 676);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogout.Location = new System.Drawing.Point(347, 496);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(263, 57);
+            this.btnLogout.Size = new System.Drawing.Size(197, 46);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -117,17 +111,16 @@ namespace WinForms
             // 
             // AdHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1192, 746);
+            this.ClientSize = new System.Drawing.Size(894, 566);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnManageCus);
             this.Controls.Add(this.ManageOrder);
             this.Controls.Add(this.ManageSupplier);
             this.Controls.Add(this.btnManageEmployee);
             this.Controls.Add(this.btnManagePro);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdHome";
             this.Text = "Chain Hang Low - Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdHome_FormClosing);

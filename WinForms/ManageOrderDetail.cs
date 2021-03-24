@@ -7,6 +7,7 @@ namespace WinForms
         public ManageOrderDetail()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
     }
 }

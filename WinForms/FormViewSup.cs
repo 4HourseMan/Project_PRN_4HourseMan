@@ -18,6 +18,7 @@ namespace WinForms
         public FormViewSup()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         public string SupID => "";

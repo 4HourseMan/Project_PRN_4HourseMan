@@ -8,6 +8,7 @@ namespace WinForms
         public AdHome()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

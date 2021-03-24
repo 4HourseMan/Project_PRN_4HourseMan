@@ -14,6 +14,7 @@ namespace WinForms
         public FormAddProduct()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         public string ProductID => txtProductID.Text;
