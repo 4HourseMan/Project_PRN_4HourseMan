@@ -14,6 +14,7 @@ namespace WinForms
         public ManageSupllier()
         {
             InitializeComponent();
+            chkSupplierStatus.AutoCheck = false;
         }
         private bool checkString(string stri, int num)
         {
@@ -92,6 +93,7 @@ namespace WinForms
                     if (_presenter.InsertSupplier())
                     {
                         ShowMessage("Added Success");
+                        loadData();
                     }
                     else
                     {
@@ -142,6 +144,7 @@ namespace WinForms
                     if (_presenter.UpdateSupplier())
                     {
                         ShowMessage("Update Success");
+                        loadData();
                     }
                     else
                     {
@@ -163,6 +166,7 @@ namespace WinForms
             if (_presenter.DeleteSupplier())
             {
                 ShowMessage("Delete Success");
+                loadData();
             }
             else
             {

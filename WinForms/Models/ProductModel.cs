@@ -34,9 +34,38 @@ namespace WinForms.Models
             return sup.getSupplier();
         }
 
-        public List<Product> SearchProduct(string name, bool status)
+        public List<Product> SearchProduct(string name)
         {
-            return product.SearchProduct(name, status);
+            return product.SearchProduct(name);
+        }
+
+        public List<Product> SearchProductBySomeThing(string sup, string cate, string name)
+        {
+            return product.SearchProductBySomeThing(sup, cate, name
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                );
         }
 
         public bool UpdateProduct(Product p)
