@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WinForms.Views
 {
-    class IManageOrderView
+    public interface IManageOrderView : IView
     {
+        string OrderID { get; }
+        string UserID { get; }
+        string CusPhone { get; }
+        DateTime OrderDate { get; }
+        string Note { get; }
+        float TotalPrice { get; }
+        bool Status { get; }
     }
 }
