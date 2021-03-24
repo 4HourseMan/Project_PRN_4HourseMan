@@ -18,6 +18,7 @@ namespace WinForms
         public FormAddCustomer()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         public string Phone => txtPhone.Text.Trim();
