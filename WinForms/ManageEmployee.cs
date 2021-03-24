@@ -15,11 +15,13 @@ namespace WinForms
         public string Address => txtAddress.Text.Trim();
         public string Phone => txtPhone.Text.Trim();
         public string RoleID => "EMP";
-        public string Password => txtPassword.Text.Trim();
         public string Email => txtEmail.Text.Trim();
-        public bool Status => RadioTrue.Checked ? true : false;
 
         public string SearchName => txtUserNameSearch.Text.Trim();
+
+        public string Password => "";
+
+        public bool Status => true;
 
         public ManageEmployee()
         {
@@ -27,7 +29,7 @@ namespace WinForms
             this.CenterToScreen();
             userPresenter = new UserPresenter(this);
         }
-        public void LoadEmployee()
+        private void LoadEmployee()
         {
             List<User> list = userPresenter.GetAllEmployee();
             if (list.Count == 0)
@@ -38,15 +40,13 @@ namespace WinForms
             {
                 txtUserID.ReadOnly = true;
                 dgvEmployeeList.DataSource = list;
+                dgvEmployeeList.Columns.Remove("Password");
                 txtUserID.Text = "";
                 txtUserName.Text = "";
                 txtAddress.Text = "";
                 txtPhone.Text = "";
-                txtPassword.Text = "";
                 txtEmail.Text = "";
                 txtRoleID.Text = "";
-                RadioTrue.Checked = false;
-                RadioFalse.Checked = false;
             }
         }
         private void ManageEmployee_Load(object sender, System.EventArgs e)
@@ -104,15 +104,7 @@ namespace WinForms
                 txtAddress.Text = row.Cells[3].Value.ToString();
                 txtPhone.Text = row.Cells[4].Value.ToString();
                 txtRoleID.Text = row.Cells[5].Value.ToString();
-                txtPassword.Text = row.Cells[6].Value.ToString();
-                if (row.Cells[7].Value.ToString().Equals("True"))
-                {
-                    RadioTrue.Checked = true;
-                }
-                else
-                {
-                    RadioFalse.Checked = true;
-                }
+
             }
         }
     }

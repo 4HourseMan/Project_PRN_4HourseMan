@@ -43,11 +43,10 @@ namespace BusinessObjects.DataAccess
             SqlParameter UserNameParam = new SqlParameter("@UserName", user.UserName);
             SqlParameter AddressParam = new SqlParameter("@Address", user.Address);
             SqlParameter PhoneParam = new SqlParameter("@Phone", user.Phone);
-            SqlParameter PasswordParam = new SqlParameter("@Password", user.Password);
             SqlParameter EmailParam = new SqlParameter("@Email", user.Email);
             SqlParameter StatusParam = new SqlParameter("@Status", user.Status);
 
-            check = DataProvider.ExecuteNonQuery("UpdateEmployee", UserIDParam, UserNameParam, AddressParam, PhoneParam, PasswordParam, EmailParam, StatusParam);
+            check = DataProvider.ExecuteNonQuery("UpdateEmployee", UserIDParam, UserNameParam, AddressParam, PhoneParam, EmailParam, StatusParam);
             return check;
         }
 
