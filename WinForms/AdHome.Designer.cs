@@ -32,7 +32,7 @@ namespace WinForms
             this.btnManagePro = new System.Windows.Forms.Button();
             this.btnManageEmployee = new System.Windows.Forms.Button();
             this.ManageSupplier = new System.Windows.Forms.Button();
-            this.ManageOrder = new System.Windows.Forms.Button();
+            this.ViewOrder = new System.Windows.Forms.Button();
             this.btnManageCus = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lbUID = new System.Windows.Forms.Label();
@@ -77,18 +77,18 @@ namespace WinForms
             this.ManageSupplier.UseVisualStyleBackColor = true;
             this.ManageSupplier.Click += new System.EventHandler(this.ManageSupplier_Click);
             // 
-            // ManageOrder
+            // ViewOrder
             // 
-            this.ManageOrder.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ManageOrder.Location = new System.Drawing.Point(729, 64);
-            this.ManageOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.ManageOrder.Name = "ManageOrder";
-            this.ManageOrder.Size = new System.Drawing.Size(180, 485);
-            this.ManageOrder.TabIndex = 3;
-            this.ManageOrder.Text = "View Order";
-            this.ManageOrder.UseVisualStyleBackColor = true;
-            this.ManageOrder.Click += new System.EventHandler(this.ManageOrder_Click);
+            this.ViewOrder.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ViewOrder.Location = new System.Drawing.Point(729, 64);
+            this.ViewOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.ViewOrder.Name = "ViewOrder";
+            this.ViewOrder.Size = new System.Drawing.Size(180, 485);
+            this.ViewOrder.TabIndex = 3;
+            this.ViewOrder.Text = "View Order";
+            this.ViewOrder.UseVisualStyleBackColor = true;
+            this.ViewOrder.Click += new System.EventHandler(this.ViewOrder_Click);
             // 
             // btnManageCus
             // 
@@ -133,7 +133,7 @@ namespace WinForms
             this.Controls.Add(this.lbUID);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnManageCus);
-            this.Controls.Add(this.ManageOrder);
+            this.Controls.Add(this.ViewOrder);
             this.Controls.Add(this.ManageSupplier);
             this.Controls.Add(this.btnManageEmployee);
             this.Controls.Add(this.btnManagePro);
@@ -151,7 +151,7 @@ namespace WinForms
         private System.Windows.Forms.Button btnManagePro;
         private System.Windows.Forms.Button btnManageEmployee;
         private System.Windows.Forms.Button ManageSupplier;
-        private System.Windows.Forms.Button ManageOrder;
+        private System.Windows.Forms.Button ViewOrder;
         private System.Windows.Forms.Button btnManageCus;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lbUID;

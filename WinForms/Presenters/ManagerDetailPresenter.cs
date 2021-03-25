@@ -16,11 +16,11 @@ namespace WinForms.Presenters
             string ProductID = View.ProductID;
             int Quantity = View.Quantity;
             float Price = View.Price;
-            BusinessObjects.OrderDetail d = new BusinessObjects.OrderDetail(1, OrderID, ProductID, Quantity, Price);
+            BusinessObjects.OrderDetail d = new OrderDetail(1, OrderID, ProductID, Quantity, Price);
             return DetailModel.AddDetail(d);
         }
 
-        public List<BusinessObjects.OrderDetail> GetDetail()
+        public List<OrderDetail> GetDetail()
         {
             int OrderID = View.OrderID;
             return DetailModel.GetDetail(OrderID);
