@@ -270,18 +270,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\CustomerIcon.png" />
-    <Content Include="Images\CustomerInfoIcon.png" />
-    <Content Include="Images\EmployeeIcon.png" />
-    <Content Include="Images\Loginbtn.png" />
     <Content Include="Images\Logo.png" />
-    <Content Include="Images\ManageSupIcon.png" />
-    <Content Include="Images\OrderIcon.png" />
-    <Content Include="Images\SignUpbtn1.png" />
-    <Content Include="Images\SignUpbtn2.png" />
-    <Content Include="Images\ViewCarIcon.png" />
-    <Content Include="Images\ViewOrderIcon.png" />
-    <Content Include="Images\ViewSupIcon.png" />
+    <Content Include="Images\ManageCar.png" />
+    <Content Include="Images\ManageCus.png" />
+    <Content Include="Images\ManageEmp.png" />
+    <Content Include="Images\ManageOrder.png" />
+    <Content Include="Images\ManageSup.png" />
+    <Content Include="Images\ViewCar.png" />
+    <Content Include="Images\ViewCusInfoIcon.png" />
+    <Content Include="Images\ViewOrder.png" />
+    <Content Include="Images\ViewSup.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2044497.jpg" />
