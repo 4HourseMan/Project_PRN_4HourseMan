@@ -147,7 +147,7 @@ namespace WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1258, 808);
+            this.ClientSize = new System.Drawing.Size(1277, 808);
             this.Controls.Add(this.lbUID);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnManageCus);
@@ -157,6 +157,7 @@ namespace WinForms
             this.Controls.Add(this.btnManagePro);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chain Hang Low - Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdHome_FormClosing);
             this.ResumeLayout(false);

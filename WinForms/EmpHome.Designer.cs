@@ -29,6 +29,7 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpHome));
             this.btnLogout = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnManageOrder = new System.Windows.Forms.Button();
@@ -39,82 +40,95 @@ namespace WinForms
             // 
             // btnLogout
             // 
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLogout.Location = new System.Drawing.Point(405, 569);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(76)))), ((int)(((byte)(101)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.Font = new System.Drawing.Font("Constantia", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(892, 13);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(257, 57);
             this.btnLogout.TabIndex = 13;
             this.btnLogout.Text = "Log Out";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.Location = new System.Drawing.Point(845, 68);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(32, 434);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(232, 479);
+            this.button5.Size = new System.Drawing.Size(394, 335);
             this.button5.TabIndex = 12;
-            this.button5.Text = "Manage Customer Infor";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // btnManageOrder
             // 
+            this.btnManageOrder.FlatAppearance.BorderSize = 0;
+            this.btnManageOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnManageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnManageOrder.Location = new System.Drawing.Point(290, 67);
+            this.btnManageOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnManageOrder.Image")));
+            this.btnManageOrder.Location = new System.Drawing.Point(456, 78);
             this.btnManageOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageOrder.Name = "btnManageOrder";
-            this.btnManageOrder.Size = new System.Drawing.Size(232, 479);
+            this.btnManageOrder.Size = new System.Drawing.Size(394, 335);
             this.btnManageOrder.TabIndex = 11;
-            this.btnManageOrder.Text = "Manage Order";
             this.btnManageOrder.UseVisualStyleBackColor = true;
             this.btnManageOrder.Click += new System.EventHandler(this.btnManageOrder_Click);
             // 
             // btnViewSup
             // 
+            this.btnViewSup.FlatAppearance.BorderSize = 0;
+            this.btnViewSup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewSup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnViewSup.Location = new System.Drawing.Point(569, 67);
+            this.btnViewSup.Image = ((System.Drawing.Image)(resources.GetObject("btnViewSup.Image")));
+            this.btnViewSup.Location = new System.Drawing.Point(456, 432);
             this.btnViewSup.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewSup.Name = "btnViewSup";
-            this.btnViewSup.Size = new System.Drawing.Size(232, 479);
+            this.btnViewSup.Size = new System.Drawing.Size(394, 335);
             this.btnViewSup.TabIndex = 10;
-            this.btnViewSup.Text = "View Supplier";
             this.btnViewSup.UseVisualStyleBackColor = true;
             this.btnViewSup.Click += new System.EventHandler(this.btnViewSup_Click);
             // 
             // btnViewCar
             // 
+            this.btnViewCar.FlatAppearance.BorderSize = 0;
+            this.btnViewCar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewCar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnViewCar.Location = new System.Drawing.Point(32, 67);
+            this.btnViewCar.Image = ((System.Drawing.Image)(resources.GetObject("btnViewCar.Image")));
+            this.btnViewCar.Location = new System.Drawing.Point(32, 78);
             this.btnViewCar.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewCar.Name = "btnViewCar";
-            this.btnViewCar.Size = new System.Drawing.Size(232, 479);
+            this.btnViewCar.Size = new System.Drawing.Size(394, 335);
             this.btnViewCar.TabIndex = 8;
-            this.btnViewCar.Text = "View Car";
             this.btnViewCar.UseVisualStyleBackColor = true;
             this.btnViewCar.Click += new System.EventHandler(this.btnViewCar_Click);
             // 
             // lbUID
             // 
             this.lbUID.AutoSize = true;
-            this.lbUID.Location = new System.Drawing.Point(129, 9);
+            this.lbUID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(61)))));
+            this.lbUID.Font = new System.Drawing.Font("Constantia", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lbUID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(228)))), ((int)(((byte)(233)))));
+            this.lbUID.Location = new System.Drawing.Point(29, 13);
             this.lbUID.Name = "lbUID";
-            this.lbUID.Size = new System.Drawing.Size(0, 17);
+            this.lbUID.Size = new System.Drawing.Size(0, 45);
             this.lbUID.TabIndex = 14;
             // 
             // EmpHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1105, 661);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(61)))));
+            this.ClientSize = new System.Drawing.Size(1154, 782);
             this.Controls.Add(this.lbUID);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.button5);
@@ -123,6 +137,7 @@ namespace WinForms
             this.Controls.Add(this.btnViewCar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmpHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chain Hang Low - Employee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmpHome_FormClosing);
             this.ResumeLayout(false);
