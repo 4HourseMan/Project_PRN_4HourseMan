@@ -61,7 +61,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblCustomer.DefaultCellStyle = dataGridViewCellStyle1;
             this.tblCustomer.Location = new System.Drawing.Point(17, 68);
-            this.tblCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.tblCustomer.MultiSelect = false;
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.ReadOnly = true;
@@ -75,7 +75,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(204, 378);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(216, 34);
             this.txtPhone.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(204, 421);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(216, 34);
             this.txtName.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(587, 378);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(211, 34);
             this.txtEmail.TabIndex = 1;
@@ -102,7 +102,7 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(587, 421);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(211, 34);
             this.txtAddress.TabIndex = 1;
@@ -111,7 +111,7 @@
             // 
             this.txtSearchPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchPhone.Location = new System.Drawing.Point(623, 17);
-            this.txtSearchPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchPhone.Name = "txtSearchPhone";
             this.txtSearchPhone.Size = new System.Drawing.Size(237, 39);
             this.txtSearchPhone.TabIndex = 1;
@@ -165,7 +165,7 @@
             this.btnSearchByPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchByPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSearchByPhone.Location = new System.Drawing.Point(869, 15);
-            this.btnSearchByPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchByPhone.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchByPhone.Name = "btnSearchByPhone";
             this.btnSearchByPhone.Size = new System.Drawing.Size(199, 46);
             this.btnSearchByPhone.TabIndex = 3;
@@ -178,7 +178,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCreate.Location = new System.Drawing.Point(188, 506);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(137, 46);
             this.btnCreate.TabIndex = 4;
@@ -191,7 +191,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnUpdate.Location = new System.Drawing.Point(395, 506);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(137, 46);
             this.btnUpdate.TabIndex = 4;
@@ -204,7 +204,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelete.Location = new System.Drawing.Point(587, 506);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 46);
             this.btnDelete.TabIndex = 4;
@@ -217,7 +217,7 @@
             this.btnGetAll.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnGetAll.Location = new System.Drawing.Point(869, 431);
-            this.btnGetAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetAll.Name = "btnGetAll";
             this.btnGetAll.Size = new System.Drawing.Size(137, 46);
             this.btnGetAll.TabIndex = 4;
@@ -246,9 +246,10 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.tblCustomer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageCustomerInfo";
             this.Text = "Manage Customer Info";
+            this.Load += new System.EventHandler(this.ManageCustomerInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

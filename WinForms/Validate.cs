@@ -9,7 +9,6 @@ namespace WinForms
 {
     class Validate
     {
-
         public bool CheckPhone(string phone)
         {
             bool check = true;
