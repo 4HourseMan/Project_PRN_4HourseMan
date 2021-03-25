@@ -270,7 +270,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Content Include="Images\CustomerIcon.png" />
+    <Content Include="Images\CustomerInfoIcon.png" />
+    <Content Include="Images\EmployeeIcon.png" />
+    <Content Include="Images\Loginbtn.png" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\ManageSupIcon.png" />
+    <Content Include="Images\OrderIcon.png" />
+    <Content Include="Images\SignUpbtn1.png" />
+    <Content Include="Images\SignUpbtn2.png" />
+    <Content Include="Images\ViewCarIcon.png" />
+    <Content Include="Images\ViewOrderIcon.png" />
+    <Content Include="Images\ViewSupIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2044497.jpg" />
@@ -292,6 +303,9 @@
       <Project>{61be1576-e46b-4966-aad1-4585ce1f519a}</Project>
       <Name>BusinessObjects</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2044497.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
