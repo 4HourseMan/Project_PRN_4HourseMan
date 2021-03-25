@@ -35,13 +35,14 @@ namespace WinForms
             // 
             // tblOrder
             // 
+            this.tblOrder.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tblOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblOrder.Location = new System.Drawing.Point(12, 44);
+            this.tblOrder.Location = new System.Drawing.Point(12, 12);
             this.tblOrder.Name = "tblOrder";
             this.tblOrder.ReadOnly = true;
             this.tblOrder.RowHeadersWidth = 51;
             this.tblOrder.RowTemplate.Height = 24;
-            this.tblOrder.Size = new System.Drawing.Size(761, 287);
+            this.tblOrder.Size = new System.Drawing.Size(760, 395);
             this.tblOrder.TabIndex = 0;
             this.tblOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblOrder_CellClick);
             // 
@@ -49,7 +50,8 @@ namespace WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 393);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(61)))));
+            this.ClientSize = new System.Drawing.Size(785, 419);
             this.Controls.Add(this.tblOrder);
             this.Name = "FormViewOrder";
             this.Text = "FormViewOrder";

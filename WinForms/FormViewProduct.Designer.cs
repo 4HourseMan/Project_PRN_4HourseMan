@@ -29,6 +29,7 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViewProduct));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchName = new System.Windows.Forms.TextBox();
@@ -40,38 +41,43 @@ namespace WinForms
             // 
             // btnSearch
             // 
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSearch.Location = new System.Drawing.Point(482, 411);
+            this.btnSearch.Location = new System.Drawing.Point(1017, 472);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(173, 33);
+            this.btnSearch.Size = new System.Drawing.Size(79, 41);
             this.btnSearch.TabIndex = 29;
-            this.btnSearch.Text = "Search by Name";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchName
             // 
             this.txtSearchName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.Location = new System.Drawing.Point(83, 411);
-            this.txtSearchName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchName.Location = new System.Drawing.Point(716, 472);
+            this.txtSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(380, 33);
+            this.txtSearchName.Size = new System.Drawing.Size(277, 39);
             this.txtSearchName.TabIndex = 28;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tblCar);
-            this.panel1.Location = new System.Drawing.Point(5, 9);
+            this.panel1.Location = new System.Drawing.Point(7, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 358);
+            this.panel1.Size = new System.Drawing.Size(1099, 441);
             this.panel1.TabIndex = 27;
             // 
             // tblCar
             // 
             this.tblCar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblCar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tblCar.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tblCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -82,24 +88,25 @@ namespace WinForms
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblCar.DefaultCellStyle = dataGridViewCellStyle1;
             this.tblCar.Location = new System.Drawing.Point(0, 0);
+            this.tblCar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tblCar.MultiSelect = false;
             this.tblCar.Name = "tblCar";
             this.tblCar.ReadOnly = true;
             this.tblCar.RowHeadersWidth = 51;
             this.tblCar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblCar.Size = new System.Drawing.Size(824, 356);
+            this.tblCar.Size = new System.Drawing.Size(1099, 438);
             this.tblCar.TabIndex = 0;
             // 
             // FormViewProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(832, 500);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(61)))));
+            this.ClientSize = new System.Drawing.Size(1109, 539);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearchName);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormViewProduct";
             this.Text = "FormViewProduct";
             this.Load += new System.EventHandler(this.FormViewProduct_Load);

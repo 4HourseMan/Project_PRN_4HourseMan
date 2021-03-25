@@ -35,8 +35,9 @@ namespace WinForms
             // 
             // tblOrderDetail
             // 
+            this.tblOrderDetail.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tblOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblOrderDetail.Location = new System.Drawing.Point(23, 25);
+            this.tblOrderDetail.Location = new System.Drawing.Point(12, 12);
             this.tblOrderDetail.Name = "tblOrderDetail";
             this.tblOrderDetail.RowHeadersWidth = 51;
             this.tblOrderDetail.RowTemplate.Height = 24;
@@ -47,7 +48,8 @@ namespace WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(61)))));
+            this.ClientSize = new System.Drawing.Size(786, 422);
             this.Controls.Add(this.tblOrderDetail);
             this.Name = "FormViewDetail";
             this.Text = "DetailView";

@@ -51,20 +51,20 @@ namespace WinForms
             // 
             // txtUserID
             // 
-            this.txtUserID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserID.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtUserID.Location = new System.Drawing.Point(339, 266);
             this.txtUserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(272, 39);
+            this.txtUserID.Size = new System.Drawing.Size(272, 40);
             this.txtUserID.TabIndex = 7;
             // 
             // txtUserName
             // 
-            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtUserName.Location = new System.Drawing.Point(339, 203);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(272, 39);
+            this.txtUserName.Size = new System.Drawing.Size(272, 40);
             this.txtUserName.TabIndex = 6;
             // 
             // label3
@@ -117,49 +117,49 @@ namespace WinForms
             // 
             // txtRePassword
             // 
-            this.txtRePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePassword.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtRePassword.Location = new System.Drawing.Point(339, 405);
             this.txtRePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.PasswordChar = '*';
-            this.txtRePassword.Size = new System.Drawing.Size(272, 39);
+            this.txtRePassword.Size = new System.Drawing.Size(272, 40);
             this.txtRePassword.TabIndex = 11;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtPassword.Location = new System.Drawing.Point(339, 342);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(272, 39);
+            this.txtPassword.Size = new System.Drawing.Size(272, 40);
             this.txtPassword.TabIndex = 10;
             // 
             // txtPhone
             // 
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtPhone.Location = new System.Drawing.Point(339, 539);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(272, 39);
+            this.txtPhone.Size = new System.Drawing.Size(272, 40);
             this.txtPhone.TabIndex = 15;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtEmail.Location = new System.Drawing.Point(339, 477);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(272, 39);
+            this.txtEmail.Size = new System.Drawing.Size(272, 40);
             this.txtEmail.TabIndex = 14;
             // 
             // txtAddress
             // 
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Font = new System.Drawing.Font("Berlin Sans FB", 18F);
             this.txtAddress.Location = new System.Drawing.Point(339, 611);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(272, 39);
+            this.txtAddress.Size = new System.Drawing.Size(272, 40);
             this.txtAddress.TabIndex = 16;
             // 
             // label6
