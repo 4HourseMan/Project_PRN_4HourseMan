@@ -29,35 +29,36 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tblOrderDetail = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOrderDetail)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tblOrderDetail
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 395);
-            this.dataGridView1.TabIndex = 0;
+            this.tblOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblOrderDetail.Location = new System.Drawing.Point(23, 25);
+            this.tblOrderDetail.Name = "tblOrderDetail";
+            this.tblOrderDetail.RowHeadersWidth = 51;
+            this.tblOrderDetail.RowTemplate.Height = 24;
+            this.tblOrderDetail.Size = new System.Drawing.Size(760, 395);
+            this.tblOrderDetail.TabIndex = 0;
             // 
             // FormViewDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tblOrderDetail);
             this.Name = "FormViewDetail";
             this.Text = "DetailView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormViewDetail_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tblOrderDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tblOrderDetail;
     }
 }

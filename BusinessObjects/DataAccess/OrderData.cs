@@ -50,8 +50,7 @@ namespace BusinessObjects.DataAccess
                     string note = rd.GetString(3);
                     string userID = rd.GetString(4);
                     string cusPhone = rd.GetString(5);
-                    bool status = rd.GetBoolean(6);
-                    Order o = new Order(id, date, totalPrice, note, userID, cusPhone, status);
+                    Order o = new Order(id, date, totalPrice, note, userID, cusPhone, true);
                     if (list == null)
                     {
                         list = new List<Order>();

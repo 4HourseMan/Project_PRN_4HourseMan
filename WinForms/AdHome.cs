@@ -45,9 +45,9 @@ namespace WinForms
             supplier.Show();
         }
 
-        private void ManageOrder_Click(object sender, EventArgs e)
+        private void ViewOrder_Click(object sender, EventArgs e)
         {
-            ManageOrder order = new ManageOrder();
+            FormViewOrder order = new FormViewOrder();
             order.Show();
         }
 

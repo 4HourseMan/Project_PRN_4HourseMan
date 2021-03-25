@@ -118,12 +118,5 @@ namespace WinForms
                 txtAddress.Text = row.Cells[3].Value.ToString();
             }
         }
-
-        private void label3_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-
     }
 }
