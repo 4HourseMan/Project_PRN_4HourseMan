@@ -10,6 +10,7 @@ namespace WinForms
     public partial class ManageEmployee : Form, IUserView
     {
         UserPresenter userPresenter;
+        Validate vl = new Validate();
         public string UserID => txtUserID.Text.Trim();
         public string UserName => txtUserName.Text.Trim();
         public string Address => txtAddress.Text.Trim();
@@ -81,16 +82,48 @@ namespace WinForms
 
         private void btnUpdate_Click(object sender, System.EventArgs e)
         {
-            bool check = userPresenter.UpdateEmployee();
-            if (check)
+            if (UserID.Equals("") || UserName.Equals("") || Address.Equals("") || Phone.Equals("")|| Email.Equals(""))
             {
-                LoadEmployee();
-                MessageBox.Show("Update successful!");
+                MessageBox.Show("Please fill all blank");
             }
             else
             {
-                MessageBox.Show("Update failed!");
+                string err = "";
+                if (!vl.checkString(UserName, 50))
+                {
+                    err += "Name length <= 50\n";
+                }
+
+                if (!vl.checkString(Address, 200))
+                {
+                    err += "Address length <= 200\n";
+                }
+                if (!vl.CheckPhone(Phone))
+                {
+                    err += "Phone is a string has 10 number.\n";
+                }
+                if (!vl.checkEmail(Email))
+                {
+                    err += "Wrong email format\n";
+                }
+                if (err.Equals(""))
+                {
+                    if (userPresenter.UpdateEmployee())
+                    {
+                        LoadEmployee();
+                        MessageBox.Show("Update successful!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update failed!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(err);
+                }
             }
+
         }
 
         private void dgvEmployeeList_CellClick(object sender, DataGridViewCellEventArgs e)

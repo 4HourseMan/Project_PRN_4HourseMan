@@ -9,6 +9,7 @@ namespace WinForms
     public partial class ManageCustomerInfo : Form, IManageCustomerView
     {
         private ManageCustomerPresenter MCP;
+        Validate vl = new Validate();
         public ManageCustomerInfo()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace WinForms
         private void ManageCustomerInfo_Load(object sender, System.EventArgs e)
         {
             LoadData();
-        } 
+        }
 
         private void btnGetAll_Click(object sender, System.EventArgs e)
         {
@@ -57,15 +58,36 @@ namespace WinForms
             }
             else
             {
-                if (MCP.UpdateCustomer())
+                string err = "";
+                if (!vl.checkString(CusName, 50))
                 {
-                    LoadData();
-                    MessageBox.Show("Update Successful!");
+                    err += "Customer name length <=50\n";
+                }
+                if (!vl.checkString(Address, 200))
+                {
+                    err += "Address length <= 200\n";
+                }
+                if (!vl.checkEmail(Email))
+                {
+                    err += "Wrong email format\n";
+                }
+                if (err.Equals(""))
+                {
+                    if (MCP.UpdateCustomer())
+                    {
+                        LoadData();
+                        MessageBox.Show("Update Successful!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Fail!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Update Fail!");
+                    MessageBox.Show(err);
                 }
+
             }
         }
 

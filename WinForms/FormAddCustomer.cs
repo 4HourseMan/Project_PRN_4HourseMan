@@ -15,6 +15,8 @@ namespace WinForms
     public partial class FormAddCustomer : Form, IManageCustomerView
     {
         private ManageCustomerPresenter MCP;
+        Validate vl = new Validate();
+     
         public FormAddCustomer()
         {
             InitializeComponent();
@@ -32,30 +34,6 @@ namespace WinForms
         public string SearchPhone => throw new NotImplementedException();
 
 
-        public bool CheckPhone(string phone)
-        {
-            bool check = true;
-            try
-            {
-                if (phone.Length < 10)
-                {
-                    check = false;
-                }
-                else
-                {
-                    int alo = int.Parse(phone);
-                    if(alo < 0)
-                    {
-                        check = false;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                check = false;
-            }
-            return check;
-        }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -66,9 +44,21 @@ namespace WinForms
             else
             {
                 string err = "";
-                if(!CheckPhone(Phone))
+                if(!vl.CheckPhone(Phone))
                 {
                     err += "Phone is a string has 10 number.\n";
+                }
+                if (!vl.checkString(CusName,50))
+                {
+                    err += "Customer name length <=50\n";
+                }
+                if (!vl.checkString(Address, 200))
+                {
+                    err += "Address length <= 200\n";
+                }
+                if (!vl.checkEmail(Email))
+                {
+                    err += "Wrong email format\n";
                 }
                 if (err.Equals(""))
                 {
@@ -87,7 +77,6 @@ namespace WinForms
                 {
                     MessageBox.Show(err);
                 }
-
             }
         }
     }

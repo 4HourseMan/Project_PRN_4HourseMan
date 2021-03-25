@@ -15,6 +15,7 @@ namespace WinForms
     public partial class FormAddEmployee : Form, IUserView
     {
         UserPresenter userPresenter;
+        Validate vl = new Validate();
         public FormAddEmployee()
         {
             InitializeComponent();
@@ -42,19 +43,58 @@ namespace WinForms
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            bool check = userPresenter.InsertEmployee();
-            if (check)
+
+            if (UserID.Equals("") || UserName.Equals("") || Address.Equals("") || Phone.Equals("") || Password.Equals("") || Email.Equals(""))
             {
-                this.Hide();
-                ManageEmployee manageEmployee = new ManageEmployee();
-                manageEmployee.Show();
-                MessageBox.Show("Add Employee Successful!");
-            }else
+                MessageBox.Show("Please fill all blank");
+            }
+            else
             {
-                MessageBox.Show("Add Employee Failed!");
+                string err = "";
+                if (!vl.checkID(UserID))
+                {
+                    err += "Wrong ID format\n";
+                }
+                if (!vl.checkString(UserName, 50))
+                {
+                    err += "Name length <= 50\n";
+                }
+
+                if (!vl.checkString(Address, 200))
+                {
+                    err += "Address length <= 200\n";
+                }
+                if (!vl.CheckPhone(Phone))
+                {
+                    err += "Phone is a string has 10 number.\n";
+                }
+                if (!vl.checkString(Password, 50))
+                {
+                    err += "Password length <= 50\n";
+                }
+                if (!vl.checkEmail(Email))
+                {
+                    err += "Wrong email format\n";
+                }
+                if (err.Equals(""))
+                {
+                    if (userPresenter.InsertEmployee())
+                    {
+                        this.Hide();
+                        ManageEmployee manageEmployee = new ManageEmployee();
+                        manageEmployee.Show();
+                        MessageBox.Show("Add Employee Successful!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Add Employee Failed!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(err);
+                }
             }
         }
-
-        
     }
 }

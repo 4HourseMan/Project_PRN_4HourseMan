@@ -11,6 +11,7 @@ namespace WinForms
     public partial class ManageCar : Form, IManageCarView
     {
         private ManagerCarPresenter MCP;
+        Validate vl = new Validate();
         public string ProductID => txtProductID.Text.Trim();
 
         public string ProductName1 => txtProductName.Text.Trim();
@@ -43,61 +44,6 @@ namespace WinForms
             LoadData();
         }
 
-        private bool checkInt(string num)
-        {
-            bool check = true;
-            try
-            {
-                int alo = int.Parse(num);
-                if (alo <= 0)
-                {
-                    check = false;
-                }
-            }
-            catch (Exception)
-            {
-                check = false;
-            }
-            return check;
-        }
-
-        private bool checkFloat(string num)
-        {
-            bool check = true;
-            try
-            {
-                float alo = float.Parse(num);
-                if (alo <= 0)
-                {
-                    check = false;
-                }
-            }
-            catch (Exception)
-            {
-                check = false;
-            }
-            return check;
-        }
-
-        private bool checkString(string stri, int num)
-        {
-            bool check = true;
-            if (stri.Trim().Length > num)
-            {
-                check = false;
-            }
-            return check;
-        }
-
-        private bool checkID(string stri)
-        {
-            bool check = true;
-            if (!Regex.IsMatch(stri, "(?i)^(?=.*[a-z])[a-z0-9]{1,10}$"))
-            {
-                check = false;
-            }
-            return check;
-        }
         private void LoadData()
         {
 
@@ -141,15 +87,15 @@ namespace WinForms
             else
             {
                 string err = "";
-                if (!checkString(ProductName1 , 50))
+                if (!vl.checkString(ProductName1 , 50))
                 {
                     err += "Name length <= 50\n";
                 }
-                if (!checkInt(Quantity))
+                if (!vl.checkInt(Quantity))
                 {
                     err += "Quantity is int number\n";
                 }
-                if (!checkFloat(Price))
+                if (!vl.checkFloat(Price))
                 {
                     err += "Price is number\n";
                 }
