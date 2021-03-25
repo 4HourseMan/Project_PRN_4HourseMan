@@ -36,5 +36,11 @@ namespace WinForms
             FormViewSup sup = new FormViewSup();
             sup.Show();
         }
+
+        private void btnManageOrder_Click(object sender, EventArgs e)
+        {
+            ManageOrder order = new ManageOrder();
+            order.Show();
+        }
     }
 }
