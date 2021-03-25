@@ -8,7 +8,7 @@ namespace WinForms.Models
     {
         private OrderData order = new OrderData();
 
-        public bool AddOrder(Order o)
+        public int AddOrder(Order o)
         {
             return order.AddOrder(o);
         }

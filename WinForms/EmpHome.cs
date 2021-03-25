@@ -39,7 +39,7 @@ namespace WinForms
 
         private void btnManageOrder_Click(object sender, EventArgs e)
         {
-            ManageOrder order = new ManageOrder();
+            ManageOrder order = new ManageOrder() { userID = UID};
             order.Show();
         }
     }

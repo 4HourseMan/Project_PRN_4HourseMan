@@ -24,15 +24,12 @@ namespace WinForms
 
         public int OrderIDDetail { get; set; }
 
-        public int DetailID => throw new NotImplementedException();
 
         public int OrderID => OrderIDDetail;
 
-        public string ProductID => throw new NotImplementedException();
+        public int DetailID => throw new NotImplementedException();
 
-        public int Quantity => throw new NotImplementedException();
-
-        public float Price => throw new NotImplementedException();
+        public List<Product> list => throw new NotImplementedException();
 
         private void LoadData()
         {

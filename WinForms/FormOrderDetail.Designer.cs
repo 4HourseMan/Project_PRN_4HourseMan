@@ -45,6 +45,8 @@ namespace WinForms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCarID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataCarView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCartView)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,7 +73,7 @@ namespace WinForms
             this.dataCartView.ReadOnly = true;
             this.dataCartView.RowHeadersWidth = 51;
             this.dataCartView.RowTemplate.Height = 24;
-            this.dataCartView.Size = new System.Drawing.Size(498, 329);
+            this.dataCartView.Size = new System.Drawing.Size(498, 255);
             this.dataCartView.TabIndex = 1;
             this.dataCartView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCartView_CellClick);
             // 
@@ -231,11 +233,31 @@ namespace WinForms
             this.txtCarID.Size = new System.Drawing.Size(180, 39);
             this.txtCarID.TabIndex = 37;
             // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(720, 297);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Total Price:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(888, 303);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(16, 17);
+            this.lbTotal.TabIndex = 48;
+            this.lbTotal.Text = "0";
+            // 
             // FormOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 706);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -253,6 +275,7 @@ namespace WinForms
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -274,5 +297,7 @@ namespace WinForms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCarID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbTotal;
     }
 }

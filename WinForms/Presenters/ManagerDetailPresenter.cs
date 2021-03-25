@@ -10,14 +10,14 @@ namespace WinForms.Presenters
         {
         }
 
-        public bool AddDetail()
+        public void AddDetail()
         {
             int OrderID = View.OrderID;
-            string ProductID = View.ProductID;
-            int Quantity = View.Quantity;
-            float Price = View.Price;
-            BusinessObjects.OrderDetail d = new OrderDetail(1, OrderID, ProductID, Quantity, Price);
-            return DetailModel.AddDetail(d);
+            List<Product> list = View.list;
+            foreach (Product lp in list) {
+                OrderDetail d = new OrderDetail(1, OrderID, lp.ProductID, lp.Quantity, lp.Price);
+                DetailModel.AddDetail(d);
+            }
         }
 
         public List<OrderDetail> GetDetail()

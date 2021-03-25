@@ -32,6 +32,7 @@ namespace WinForms
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tblOrder = new System.Windows.Forms.DataGridView();
+            this.btnView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@ namespace WinForms
             // 
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCreate.Location = new System.Drawing.Point(117, 431);
+            this.btnCreate.Location = new System.Drawing.Point(96, 431);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(127, 48);
@@ -52,7 +53,7 @@ namespace WinForms
             // 
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDelete.Location = new System.Drawing.Point(512, 431);
+            this.btnDelete.Location = new System.Drawing.Point(322, 431);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 48);
@@ -72,12 +73,23 @@ namespace WinForms
             this.tblOrder.TabIndex = 41;
             this.tblOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblOrder_CellClick);
             // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(523, 431);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(144, 47);
+            this.btnView.TabIndex = 42;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // ManageOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(777, 538);
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.tblOrder);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCreate);
@@ -95,5 +107,6 @@ namespace WinForms
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView tblOrder;
+        private System.Windows.Forms.Button btnView;
     }
 }

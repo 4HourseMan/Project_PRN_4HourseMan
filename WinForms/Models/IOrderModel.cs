@@ -5,7 +5,7 @@ namespace WinForms.Models
 {
     public interface IOrderModel
     {
-        bool AddOrder(Order o);
+        int AddOrder(Order o);
         bool DeleteOrder(string id);
         List<Order> GetAllOrder();
     }

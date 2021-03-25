@@ -13,19 +13,50 @@ using WinForms.Views;
 
 namespace WinForms
 {
-    public partial class FormOrderDetail : Form, IManageCarView, IManageCustomerView
+    public partial class FormOrderDetail : Form, IManageCarView, IManageCustomerView, IManageOrderView, IDetailOrderView
     {
         private ManagerCarPresenter MCP;
         private ManageCustomerPresenter MCusP;
+        private ManageOrderPresenter MOP;
+        private ManagerDetailPresenter MDP;
+
         List<Product> listCar;
         List<Product> products;
         Product p = null;
         string pCartID = null;
         Validate vl = new Validate();
-
+        float totalPrice = 0;
+        int orderID = 0;
         public string ProductID => pCartID;
 
         public string SearchName => "";
+
+
+        public string Phone => txtPhone.Text.Trim();
+
+        public string CusName => "";
+
+        public string Email => "";
+
+        public string Address => "";
+
+
+        public string UserID => UID;
+
+        public string CusPhone => txtPhone.Text.Trim();
+
+        public DateTime OrderDate => DateTime.Now;
+
+        public string Note => txtNote.Text.Trim();
+
+        public float TotalPrice => totalPrice;
+
+        public bool Status => true;
+
+        public string UID { get; set; }
+
+
+        int IDetailOrderView.OrderID => this.orderID;
 
         public string ProductName1 => throw new NotImplementedException();
 
@@ -37,21 +68,21 @@ namespace WinForms
 
         public int Quantity => throw new NotImplementedException();
 
-        public string Phone => txtPhone.Text.Trim();
-
-        public string CusName => "";
-
-        public string Email => "";
-
-        public string Address => "";
-
         public string SearchPhone => throw new NotImplementedException();
+
+        public string OrderID => throw new NotImplementedException();
+
+        public int DetailID => throw new NotImplementedException();
+
+        public List<Product> list => products;
 
         public FormOrderDetail()
         {
             InitializeComponent();
             MCP = new ManagerCarPresenter(this);
             MCusP = new ManageCustomerPresenter(this);
+            MOP = new ManageOrderPresenter(this);
+            MDP = new ManagerDetailPresenter(this);
             products = new List<Product>();
         }
 
@@ -59,11 +90,19 @@ namespace WinForms
         {
             listCar = MCP.SearchProduct();
             dataCarView.DataSource = listCar;
+            dataCarView.Columns.Remove("Status");
+            dataCarView.Columns.Remove("CreateDate");
         }
         private void LoadCart()
         {
+            totalPrice = 0;
             dataCartView.DataSource = null;
             dataCartView.DataSource = products;
+            foreach(Product lp in products)
+            {
+                totalPrice += lp.Price;
+            }
+            lbTotal.Text = totalPrice.ToString();
             dataCartView.Columns.Remove("CategoryID");
             dataCartView.Columns.Remove("SupplierID");
             dataCartView.Columns.Remove("Status");
@@ -238,8 +277,9 @@ namespace WinForms
                 if (err.Equals(""))
                 {
                     MCusP.AddCustomer();
-
-
+                    orderID = MOP.AddOrder();
+                    MDP.AddDetail();
+                    MessageBox.Show("OK");
                 }
                 else
                 {

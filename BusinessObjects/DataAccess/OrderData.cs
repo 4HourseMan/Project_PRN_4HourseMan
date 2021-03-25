@@ -7,7 +7,7 @@ namespace BusinessObjects.DataAccess
 {
     public class OrderData
     {
-        public bool AddOrder(Order o)
+        public int AddOrder(Order o)
         {
             SqlParameter orderDate = new SqlParameter("@OrderDate", o.OrderDate);
             SqlParameter totalPrice = new SqlParameter("@TotalPrice", o.TotalPrice);
@@ -17,11 +17,11 @@ namespace BusinessObjects.DataAccess
             SqlParameter status = new SqlParameter("@Status", o.Status);
             try
             {
-                return DataProvider.ExecuteNonQuery("InsertOrder", orderDate, totalPrice, note, userID, cusPhone, status);
+                return DataProvider.ExecuteNonQueryLastInsertedId("InsertOrder", orderDate, totalPrice, note, userID, cusPhone, status);
             }
             catch (SqlException)
             {
-                return false;
+                return 0;
             }
         }
         public bool DeleteOrder(string ID)

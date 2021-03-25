@@ -5,8 +5,8 @@ namespace WinForms.Models
 {
     public interface IDetailModel
     {
-        bool AddDetail(BusinessObjects.OrderDetail d);
+        void AddDetail(OrderDetail d);
 
-        List<BusinessObjects.OrderDetail> GetDetail(int ID);
+        List<OrderDetail> GetDetail(int ID);
     }
 }

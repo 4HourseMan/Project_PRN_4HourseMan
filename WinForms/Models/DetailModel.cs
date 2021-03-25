@@ -7,11 +7,11 @@ namespace WinForms.Models
     public class DetailModel : IDetailModel
     {
         private DetailData detail = new DetailData();
-        public bool AddDetail(BusinessObjects.OrderDetail d)
+        public void AddDetail(OrderDetail d)
         {
-            return detail.AddDetail(d);
+           detail.AddDetail(d);
         }
-        public List<BusinessObjects.OrderDetail> GetDetail(int ID)
+        public List<OrderDetail> GetDetail(int ID)
         {
             return detail.GetDetail(ID);
         }

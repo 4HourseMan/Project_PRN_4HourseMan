@@ -11,6 +11,8 @@ namespace WinForms
     {
         ManageOrderPresenter orderPresenter;
 
+        int orderID = -1;
+        public string userID { get; set; }
         public string OrderID => throw new NotImplementedException();
 
         public string UserID => throw new NotImplementedException();
@@ -39,7 +41,7 @@ namespace WinForms
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            FormOrderDetail detail = new FormOrderDetail();
+            FormOrderDetail detail = new FormOrderDetail() { UID = userID};
             detail.Show();
         }
 
@@ -54,25 +56,31 @@ namespace WinForms
 
         }
 
-        private void btnView_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tblOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = tblOrder.Rows[e.RowIndex];
-                int orderID = int.Parse(row.Cells[0].Value.ToString());
-                FormViewDetail viewDetail = new FormViewDetail() { OrderIDDetail = orderID };
-                viewDetail.Show();
+                orderID = int.Parse(row.Cells[0].Value.ToString());
             }
         }
 
         private void ManageOrder_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if(orderID >= 0)
+            {
+                FormViewDetail viewDetail = new FormViewDetail() { OrderIDDetail = orderID };
+                viewDetail.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please choose an order to view");
+            }
         }
     }
 }

@@ -10,8 +10,7 @@ namespace WinForms.Presenters
         public ManageOrderPresenter(IManageOrderView view) : base(view)
         {
         }
-
-        public bool AddOrder()
+        public int AddOrder()
         {
             string CusPhone = View.CusPhone;
             string Note = View.Note;
