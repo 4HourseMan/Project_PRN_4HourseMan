@@ -43,7 +43,7 @@ namespace WinForms
             this.btnManagePro.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManagePro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnManagePro.Location = new System.Drawing.Point(49, 64);
-            this.btnManagePro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManagePro.Margin = new System.Windows.Forms.Padding(4);
             this.btnManagePro.Name = "btnManagePro";
             this.btnManagePro.Size = new System.Drawing.Size(180, 485);
             this.btnManagePro.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace WinForms
             this.btnManageEmployee.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnManageEmployee.Location = new System.Drawing.Point(276, 64);
-            this.btnManageEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageEmployee.Name = "btnManageEmployee";
             this.btnManageEmployee.Size = new System.Drawing.Size(180, 485);
             this.btnManageEmployee.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace WinForms
             this.ManageSupplier.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ManageSupplier.Location = new System.Drawing.Point(499, 64);
-            this.ManageSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ManageSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.ManageSupplier.Name = "ManageSupplier";
             this.ManageSupplier.Size = new System.Drawing.Size(180, 485);
             this.ManageSupplier.TabIndex = 2;
@@ -82,11 +82,11 @@ namespace WinForms
             this.ManageOrder.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ManageOrder.Location = new System.Drawing.Point(729, 64);
-            this.ManageOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ManageOrder.Margin = new System.Windows.Forms.Padding(4);
             this.ManageOrder.Name = "ManageOrder";
             this.ManageOrder.Size = new System.Drawing.Size(180, 485);
             this.ManageOrder.TabIndex = 3;
-            this.ManageOrder.Text = "Manage Order";
+            this.ManageOrder.Text = "View Order";
             this.ManageOrder.UseVisualStyleBackColor = true;
             this.ManageOrder.Click += new System.EventHandler(this.ManageOrder_Click);
             // 
@@ -95,11 +95,11 @@ namespace WinForms
             this.btnManageCus.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnManageCus.Location = new System.Drawing.Point(957, 64);
-            this.btnManageCus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageCus.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageCus.Name = "btnManageCus";
-            this.btnManageCus.Size = new System.Drawing.Size(180, 485);
+            this.btnManageCus.Size = new System.Drawing.Size(192, 485);
             this.btnManageCus.TabIndex = 4;
-            this.btnManageCus.Text = "Manage Customer Infor";
+            this.btnManageCus.Text = "Manage Customer Infomation";
             this.btnManageCus.UseVisualStyleBackColor = true;
             this.btnManageCus.Click += new System.EventHandler(this.btnManageCus_Click);
             // 
@@ -108,7 +108,7 @@ namespace WinForms
             this.btnLogout.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLogout.Location = new System.Drawing.Point(463, 610);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(263, 57);
             this.btnLogout.TabIndex = 7;
@@ -137,7 +137,7 @@ namespace WinForms
             this.Controls.Add(this.ManageSupplier);
             this.Controls.Add(this.btnManageEmployee);
             this.Controls.Add(this.btnManagePro);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdHome";
             this.Text = "Chain Hang Low - Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdHome_FormClosing);
