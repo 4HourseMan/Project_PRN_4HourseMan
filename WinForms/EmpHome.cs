@@ -5,9 +5,12 @@ namespace WinForms
 {
     public partial class EmpHome : Form
     {
-        public EmpHome()
+        string UID;
+        public EmpHome(string id)
         {
             InitializeComponent();
+            this.UID = id;
+            lbUID.Text = this.UID;
         }
 
         private void EmpHome_FormClosing(object sender, FormClosingEventArgs e)

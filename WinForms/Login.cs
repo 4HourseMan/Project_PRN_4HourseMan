@@ -46,7 +46,7 @@ namespace WinForms
                 }
                 else
                 {
-                    EmpHome empHome = new EmpHome();
+                    EmpHome empHome = new EmpHome(user.UserID);
                     this.Hide();
                     empHome.Show();
                 }
