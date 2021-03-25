@@ -13,7 +13,6 @@ namespace WinForms.Models
         ProductData product = new ProductData();
         SupplierData sup = new SupplierData();
 
-
         public bool AddProduct(Product p)
         {
             return product.AddProduct(p);
@@ -41,31 +40,7 @@ namespace WinForms.Models
 
         public List<Product> SearchProductBySomeThing(string sup, string cate, string name)
         {
-            return product.SearchProductBySomeThing(sup, cate, name
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                );
+            return product.SearchProductBySomeThing(sup, cate, name);
         }
 
         public bool UpdateProduct(Product p)
@@ -73,5 +48,14 @@ namespace WinForms.Models
             return product.UpdateProduct(p);
         }
 
+        public void UpdateQuantityProduct(Product p)
+        {
+            product.UpdateQuantityProduct(p);
+        }
+
+        public void UpdateIncreaseQuantityProduct(Product p)
+        {
+            product.UpdateIncreaseQuantityProduct(p);
+        }
     }
 }

@@ -26,10 +26,10 @@ namespace BusinessObjects.DataAccess
         }
         public bool DeleteOrder(string ID)
         {
-            SqlParameter id = new SqlParameter("@OrderID", ID);
+            SqlParameter id = new SqlParameter("@OrderID", int.Parse(ID));
             try
             {
-                return DataProvider.ExecuteNonQuery("DeteleOrder", id);
+                return DataProvider.ExecuteNonQuery("DeleteOrder", id);
             }
             catch (SqlException)
             {

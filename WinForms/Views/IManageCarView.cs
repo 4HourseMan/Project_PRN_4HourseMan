@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,6 @@ namespace WinForms.Views
         string SupplierID { get; }
         float Price { get; }
         int Quantity { get; }
+        List<Product> listP { get; }
     }
 }

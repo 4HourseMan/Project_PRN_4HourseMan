@@ -10,6 +10,32 @@ namespace BusinessObjects.DataAccess
 {
     public class ProductData
     {
+        public void UpdateIncreaseQuantityProduct(Product p)
+        {
+            SqlParameter id = new SqlParameter("@ProductID", p.ProductID);
+            SqlParameter quant = new SqlParameter("@Quantity", p.Quantity);
+
+            try
+            {
+                DataProvider.ExecuteNonQuery("UpdateIncreaseQuantityProduct", id, quant);
+            }
+            catch (SqlException)
+            { }
+        }
+
+        public void UpdateQuantityProduct(Product p)
+        {
+            SqlParameter id = new SqlParameter("@ProductID", p.ProductID);
+            SqlParameter quant = new SqlParameter("@Quantity", p.Quantity);
+
+            try
+            {
+                DataProvider.ExecuteNonQuery("UpdateQuantityProduct", id, quant);
+            }
+            catch (SqlException)
+            {}
+        }
+
         public bool AddProduct(Product p)
         {
             SqlParameter id = new SqlParameter("@ProductID", p.ProductID);

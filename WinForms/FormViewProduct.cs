@@ -31,6 +31,8 @@ namespace WinForms
 
         public int Quantity => throw new NotImplementedException();
 
+        public List<Product> listP => throw new NotImplementedException();
+
         public FormViewProduct()
         {
             InitializeComponent();

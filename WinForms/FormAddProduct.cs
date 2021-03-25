@@ -32,6 +32,8 @@ namespace WinForms
 
         public string SearchName => null;
 
+        public List<Product> listP => throw new NotImplementedException();
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             string ProductID = txtProductID.Text.Trim();

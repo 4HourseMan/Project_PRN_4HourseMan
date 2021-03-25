@@ -9,6 +9,23 @@ namespace WinForms.Presenters
     public class ManagerCarPresenter : Presenter<IManageCarView>
     {
         public ManagerCarPresenter(IManageCarView view) : base(view) { }
+
+        public void UpdateIncreaseQuantityProduct()
+        {
+            List<Product> list = View.listP;
+            foreach (Product lp in list)
+            {
+                ProductModel.UpdateIncreaseQuantityProduct(lp);
+            }
+        }
+        public void UpdateQuantityProduct()
+        {
+            List<Product> list = View.listP;
+            foreach(Product lp in list)
+            {
+                ProductModel.UpdateQuantityProduct(lp);
+            }
+        }
         public bool AddProduct()
         {
             string ProductID = View.ProductID;

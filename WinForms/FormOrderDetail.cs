@@ -22,11 +22,14 @@ namespace WinForms
 
         List<Product> listCar;
         List<Product> products;
+        List<Product> listPro;
         Product p = null;
         string pCartID = null;
+        int pCartPrice = 0;
         Validate vl = new Validate();
         float totalPrice = 0;
         int orderID = 0;
+        
         public string ProductID => pCartID;
 
         public string SearchName => "";
@@ -76,6 +79,8 @@ namespace WinForms
 
         public List<Product> list => products;
 
+        public List<Product> listP => listPro;
+
         public FormOrderDetail()
         {
             InitializeComponent();
@@ -84,6 +89,7 @@ namespace WinForms
             MOP = new ManageOrderPresenter(this);
             MDP = new ManagerDetailPresenter(this);
             products = new List<Product>();
+            listPro = new List<Product>();
         }
 
         private void LoadCar()
@@ -98,10 +104,12 @@ namespace WinForms
             totalPrice = 0;
             dataCartView.DataSource = null;
             dataCartView.DataSource = products;
-            foreach(Product lp in products)
-            {
-                totalPrice += lp.Price;
-            }
+            
+                foreach (Product lp in products)
+                {
+                    totalPrice += lp.Price;
+                }
+            
             lbTotal.Text = totalPrice.ToString();
             dataCartView.Columns.Remove("CategoryID");
             dataCartView.Columns.Remove("SupplierID");
@@ -130,6 +138,27 @@ namespace WinForms
             {
                 if (p != null)
                 {
+                    listPro.Add(p);
+                    int flag = -1;
+                    for (int i = 0; i < products.Count; i++)
+                    {
+                        if (products[i].ProductID.Equals(p.ProductID))
+                        {
+                            flag = i;
+                        }
+                    }
+                    int maxQuant = 0;
+                    for (int i = 0; i < listCar.Count; i++)
+                    {
+                        if (listCar[i].ProductID.Equals(p.ProductID))
+                        {
+                            maxQuant = listCar[i].Quantity;
+                        }
+                    }
+                    if(flag >= 0)
+                    {
+                        listPro[flag].Quantity = maxQuant - 1;
+                    }
                     products.Add(p);
                     LoadCart();
                 }
@@ -176,6 +205,7 @@ namespace WinForms
                 }
                 if (check >= 0)
                 {
+                    listPro.RemoveAt(check);
                     products.RemoveAt(check);
                     LoadCart();
                     MessageBox.Show("Delete success!");
@@ -194,10 +224,12 @@ namespace WinForms
                 DataGridViewRow row = dataCartView.Rows[e.RowIndex];
                 string proID = row.Cells[0].Value.ToString();
                 txtCarID.Text = proID;
+                int price = int.Parse(row.Cells[2].Value.ToString());
                 txtQuantity.Text = row.Cells[3].Value.ToString();
                 if (!proID.Equals(""))
                 {
                     pCartID = proID;
+                    pCartPrice = price;
                 }
 
             }
@@ -240,10 +272,11 @@ namespace WinForms
 
                     if (flag && quant <= maxQuant)
                     {
+                        products[check].Price = quant * pCartPrice;
+                        listPro[check].Quantity = maxQuant - quant;
                         products[check].Quantity = quant;
-                        products[check].Price = quant * products[check].Price;
                         LoadCart();
-                        MessageBox.Show("Update success!");
+                        MessageBox.Show("Update success!" + quant);
                     }
                     else
                     {
@@ -279,7 +312,11 @@ namespace WinForms
                     MCusP.AddCustomer();
                     orderID = MOP.AddOrder();
                     MDP.AddDetail();
+                    MCP.UpdateQuantityProduct();
                     MessageBox.Show("OK");
+                    LoadCar();
+                    products.Clear();
+                    LoadCart();
                 }
                 else
                 {

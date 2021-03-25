@@ -26,6 +26,8 @@ namespace WinForms
 
         public string SearchName => txtSearchName.Text.Trim();
 
+        public List<Product> listP => throw new NotImplementedException();
+
         public ManageCar()
         {
             InitializeComponent();

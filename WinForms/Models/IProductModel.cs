@@ -16,5 +16,7 @@ namespace WinForms.Models
         List<Product> SearchProductBySomeThing(string sup, string cate, string name);
         List<Category> GetCate();
         List<Supplier> GetSup();
+        void UpdateQuantityProduct(Product p);
+        void UpdateIncreaseQuantityProduct(Product p);
     }
 }
