@@ -31,7 +31,7 @@ namespace WinForms
         {
             this.btnLogout = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnManageOrder = new System.Windows.Forms.Button();
             this.btnViewSup = new System.Windows.Forms.Button();
             this.btnViewCar = new System.Windows.Forms.Button();
             this.lbUID = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@ namespace WinForms
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLogout.Location = new System.Drawing.Point(405, 569);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(257, 57);
             this.btnLogout.TabIndex = 13;
@@ -55,31 +55,32 @@ namespace WinForms
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button5.Location = new System.Drawing.Point(845, 68);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(232, 479);
             this.button5.TabIndex = 12;
             this.button5.Text = "Manage Customer Infor";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnManageOrder
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(290, 67);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(232, 479);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Manage Order";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnManageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnManageOrder.Location = new System.Drawing.Point(290, 67);
+            this.btnManageOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageOrder.Name = "btnManageOrder";
+            this.btnManageOrder.Size = new System.Drawing.Size(232, 479);
+            this.btnManageOrder.TabIndex = 11;
+            this.btnManageOrder.Text = "Manage Order";
+            this.btnManageOrder.UseVisualStyleBackColor = true;
+            this.btnManageOrder.Click += new System.EventHandler(this.btnManageOrder_Click);
             // 
             // btnViewSup
             // 
             this.btnViewSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewSup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnViewSup.Location = new System.Drawing.Point(569, 67);
-            this.btnViewSup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewSup.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewSup.Name = "btnViewSup";
             this.btnViewSup.Size = new System.Drawing.Size(232, 479);
             this.btnViewSup.TabIndex = 10;
@@ -92,7 +93,7 @@ namespace WinForms
             this.btnViewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewCar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnViewCar.Location = new System.Drawing.Point(32, 67);
-            this.btnViewCar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewCar.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewCar.Name = "btnViewCar";
             this.btnViewCar.Size = new System.Drawing.Size(232, 479);
             this.btnViewCar.TabIndex = 8;
@@ -117,10 +118,10 @@ namespace WinForms
             this.Controls.Add(this.lbUID);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnManageOrder);
             this.Controls.Add(this.btnViewSup);
             this.Controls.Add(this.btnViewCar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmpHome";
             this.Text = "Chain Hang Low - Employee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmpHome_FormClosing);
@@ -133,7 +134,7 @@ namespace WinForms
 
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnManageOrder;
         private System.Windows.Forms.Button btnViewSup;
         private System.Windows.Forms.Button btnViewCar;
         private System.Windows.Forms.Label lbUID;
