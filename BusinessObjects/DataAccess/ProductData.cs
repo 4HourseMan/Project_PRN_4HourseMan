@@ -109,8 +109,8 @@ namespace BusinessObjects.DataAccess
                     string nameP = rd.GetString(1);
                     string cate = rd.GetString(2);
                     string sup = rd.GetString(5);
-                    float price = Convert.ToSingle(rd.GetDouble(3));
-                    int quant = rd.GetInt32(4);
+                    float price = Convert.ToSingle(rd.GetDouble(4));
+                    int quant = rd.GetInt32(3);
                     DateTime date = rd.GetDateTime(6);
                     Product p = new Product(id, nameP, cate, sup, price, quant, date, true);
                     if (list == null)

@@ -34,11 +34,7 @@ namespace WinForms
         private void LoadOrder()
         {
             List<Order> list = orderPresenter.GetAllOrder();
-            dataGridView1.DataSource = list;
-        }
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            tblOrder.DataSource = list;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -61,6 +57,22 @@ namespace WinForms
         private void btnView_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tblOrder_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = tblOrder.Rows[e.RowIndex];
+                int orderID = int.Parse(row.Cells[0].Value.ToString());
+                FormViewDetail viewDetail = new FormViewDetail() { OrderIDDetail = orderID };
+                viewDetail.Show();
+            }
+        }
+
+        private void ManageOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

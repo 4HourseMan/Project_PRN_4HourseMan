@@ -56,20 +56,24 @@ namespace WinForms
             this.dataCarView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCarView.Location = new System.Drawing.Point(12, 12);
             this.dataCarView.Name = "dataCarView";
+            this.dataCarView.ReadOnly = true;
             this.dataCarView.RowHeadersWidth = 51;
             this.dataCarView.RowTemplate.Height = 24;
             this.dataCarView.Size = new System.Drawing.Size(483, 329);
             this.dataCarView.TabIndex = 0;
+            this.dataCarView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCarView_CellClick);
             // 
             // dataCartView
             // 
             this.dataCartView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCartView.Location = new System.Drawing.Point(519, 12);
             this.dataCartView.Name = "dataCartView";
+            this.dataCartView.ReadOnly = true;
             this.dataCartView.RowHeadersWidth = 51;
             this.dataCartView.RowTemplate.Height = 24;
             this.dataCartView.Size = new System.Drawing.Size(498, 329);
             this.dataCartView.TabIndex = 1;
+            this.dataCartView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCartView_CellClick);
             // 
             // panel1
             // 
@@ -94,6 +98,7 @@ namespace WinForms
             this.btnCreate.TabIndex = 45;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtNote
             // 
@@ -145,18 +150,20 @@ namespace WinForms
             this.btnAdd.TabIndex = 44;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDelete.Location = new System.Drawing.Point(222, 348);
+            this.btnDelete.Location = new System.Drawing.Point(837, 348);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(180, 48);
             this.btnDelete.TabIndex = 45;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel2
             // 
@@ -173,23 +180,24 @@ namespace WinForms
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(225, 84);
+            this.txtQuantity.Location = new System.Drawing.Point(170, 84);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(125, 39);
+            this.txtQuantity.Size = new System.Drawing.Size(180, 39);
             this.txtQuantity.TabIndex = 46;
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnUpdate.Location = new System.Drawing.Point(16, 207);
+            this.btnUpdate.Location = new System.Drawing.Point(170, 207);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(180, 48);
             this.btnUpdate.TabIndex = 45;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label3
             // 
@@ -216,10 +224,11 @@ namespace WinForms
             // txtCarID
             // 
             this.txtCarID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarID.Location = new System.Drawing.Point(225, 21);
+            this.txtCarID.Location = new System.Drawing.Point(170, 21);
             this.txtCarID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCarID.Name = "txtCarID";
-            this.txtCarID.Size = new System.Drawing.Size(125, 39);
+            this.txtCarID.ReadOnly = true;
+            this.txtCarID.Size = new System.Drawing.Size(180, 39);
             this.txtCarID.TabIndex = 37;
             // 
             // FormOrderDetail
@@ -235,6 +244,8 @@ namespace WinForms
             this.Controls.Add(this.dataCarView);
             this.Name = "FormOrderDetail";
             this.Text = "OrderDetailForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormOrderDetail_FormClosing);
+            this.Load += new System.EventHandler(this.FormOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataCarView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCartView)).EndInit();
             this.panel1.ResumeLayout(false);

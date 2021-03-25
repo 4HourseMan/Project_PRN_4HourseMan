@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +8,244 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinForms.Presenters;
+using WinForms.Views;
 
 namespace WinForms
 {
-    public partial class FormOrderDetail : Form
+    public partial class FormOrderDetail : Form, IManageCarView, IManageCustomerView
     {
+        private ManagerCarPresenter MCP;
+        private ManageCustomerPresenter MCusP;
+        List<Product> listCar;
+        List<Product> products;
+        Product p = null;
+        string pCartID = null;
+        Validate vl = new Validate();
+
+        public string ProductID => pCartID;
+
+        public string SearchName => "";
+
+        public string ProductName1 => throw new NotImplementedException();
+
+        public string CategoryID => throw new NotImplementedException();
+
+        public string SupplierID => throw new NotImplementedException();
+
+        public float Price => throw new NotImplementedException();
+
+        public int Quantity => throw new NotImplementedException();
+
+        public string Phone => txtPhone.Text.Trim();
+
+        public string CusName => "";
+
+        public string Email => "";
+
+        public string Address => "";
+
+        public string SearchPhone => throw new NotImplementedException();
+
         public FormOrderDetail()
         {
             InitializeComponent();
+            MCP = new ManagerCarPresenter(this);
+            MCusP = new ManageCustomerPresenter(this);
+            products = new List<Product>();
+        }
+
+        private void LoadCar()
+        {
+            listCar = MCP.SearchProduct();
+            dataCarView.DataSource = listCar;
+        }
+        private void LoadCart()
+        {
+            dataCartView.DataSource = null;
+            dataCartView.DataSource = products;
+            dataCartView.Columns.Remove("CategoryID");
+            dataCartView.Columns.Remove("SupplierID");
+            dataCartView.Columns.Remove("Status");
+            dataCartView.Columns.Remove("CreateDate");
+        }
+
+        private void FormOrderDetail_Load(object sender, EventArgs e)
+        {
+            LoadCar();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            bool check = true;
+            foreach (Product lp in products)
+            {
+                if (lp.ProductID.Equals(p.ProductID))
+                {
+                    MessageBox.Show("This product has exist!");
+                    check = false;
+                }
+            }
+
+            if (check)
+            {
+                if (p != null)
+                {
+                    products.Add(p);
+                    LoadCart();
+                }
+                else
+                {
+                    MessageBox.Show("Please choose a product");
+                }
+            }
+
+        }
+
+        private void dataCarView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataCarView.Rows[e.RowIndex];
+                string proID = row.Cells[0].Value.ToString();
+                string name = row.Cells[1].Value.ToString();
+                float price = float.Parse(row.Cells[4].Value.ToString());
+                if (!proID.Equals(""))
+                {
+                    p = new Product(proID, name, 1, price);
+                }
+            }
+        }
+
+        private void FormOrderDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int check = -1;
+
+            if (products.Count > 0)
+            {
+                for (int i = 0; i < products.Count; i++)
+                {
+                    if (products[i].ProductID.Equals(pCartID))
+                    {
+                        check = i;
+                    }
+                }
+                if (check >= 0)
+                {
+                    products.RemoveAt(check);
+                    LoadCart();
+                    MessageBox.Show("Delete success!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No product in cart!");
+            }
+        }
+
+        private void dataCartView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataCartView.Rows[e.RowIndex];
+                string proID = row.Cells[0].Value.ToString();
+                txtCarID.Text = proID;
+                txtQuantity.Text = row.Cells[3].Value.ToString();
+                if (!proID.Equals(""))
+                {
+                    pCartID = proID;
+                }
+
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int check = -1;
+
+            if (products.Count > 0)
+            {
+                for (int i = 0; i < products.Count; i++)
+                {
+                    if (products[i].ProductID.Equals(pCartID))
+                    {
+                        check = i;
+                    }
+                }
+                if (check >= 0)
+                {
+                    int quant = 0;
+                    int maxQuant = 0;
+                    for (int i = 0; i < listCar.Count; i++)
+                    {
+                        if (listCar[i].ProductID.Equals(pCartID))
+                        {
+                            maxQuant = listCar[i].Quantity;
+                        }
+                    }
+                    bool flag = true;
+                    try
+                    {
+                        quant = int.Parse(txtQuantity.Text.Trim());
+                    }
+                    catch
+                    {
+                        flag = false;
+                        MessageBox.Show("Please input a number < " + maxQuant);
+                    }
+
+                    if (flag && quant <= maxQuant)
+                    {
+                        products[check].Quantity = quant;
+                        products[check].Price = quant * products[check].Price;
+                        LoadCart();
+                        MessageBox.Show("Update success!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please input a number < " + maxQuant);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please choose a product to update");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No product in cart!");
+            }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (Phone.Equals(""))
+            {
+                MessageBox.Show("Please fill the phone");
+            }
+            else
+            {
+                string err = "";
+                if (!vl.CheckPhone(Phone))
+                {
+                    err += "Phone is a string has 10 number.\n";
+                }
+                if (err.Equals(""))
+                {
+                    MCusP.AddCustomer();
+
+
+                }
+                else
+                {
+                    MessageBox.Show(err);
+                }
+            }
         }
     }
 }

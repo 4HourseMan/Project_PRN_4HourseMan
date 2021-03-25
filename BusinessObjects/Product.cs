@@ -15,6 +15,13 @@ namespace BusinessObjects
             CreateDate = createDate;
             Status = status;
         }
+        public Product(string productID, string productName, int quantity, float price)
+        {
+            ProductID = productID;
+            ProductName = productName;
+            Quantity = quantity;
+            Price = price * quantity;
+        }
 
         public string ProductID { get; set; }
         public string ProductName { get; set; }

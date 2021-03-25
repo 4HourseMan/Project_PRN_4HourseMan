@@ -31,9 +31,8 @@ namespace WinForms
         {
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tblOrder = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreate
@@ -53,7 +52,7 @@ namespace WinForms
             // 
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDelete.Location = new System.Drawing.Point(312, 431);
+            this.btnDelete.Location = new System.Drawing.Point(512, 431);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 48);
@@ -62,28 +61,16 @@ namespace WinForms
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnView
+            // tblOrder
             // 
-            this.btnView.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnView.Location = new System.Drawing.Point(517, 431);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(127, 48);
-            this.btnView.TabIndex = 40;
-            this.btnView.Text = "View Detail";
-            this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(705, 348);
-            this.dataGridView1.TabIndex = 41;
+            this.tblOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblOrder.Location = new System.Drawing.Point(40, 30);
+            this.tblOrder.Name = "tblOrder";
+            this.tblOrder.RowHeadersWidth = 51;
+            this.tblOrder.RowTemplate.Height = 24;
+            this.tblOrder.Size = new System.Drawing.Size(705, 348);
+            this.tblOrder.TabIndex = 41;
+            this.tblOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblOrder_CellClick);
             // 
             // ManageOrder
             // 
@@ -91,15 +78,15 @@ namespace WinForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(777, 538);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.tblOrder);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCreate);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageOrder";
             this.Text = "Chain Hang Low - Manage Order";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManageOrder_FormClosing);
             this.Load += new System.EventHandler(this.ManageOrder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,7 +94,6 @@ namespace WinForms
         #endregion
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tblOrder;
     }
 }

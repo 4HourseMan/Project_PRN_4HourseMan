@@ -59,7 +59,7 @@ namespace WinForms
             this.label3.Location = new System.Drawing.Point(102, 329);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 25);
+            this.label3.Size = new System.Drawing.Size(114, 32);
             this.label3.TabIndex = 66;
             this.label3.Text = "Address :";
             // 
@@ -70,7 +70,7 @@ namespace WinForms
             this.label4.Location = new System.Drawing.Point(124, 253);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 25);
+            this.label4.Size = new System.Drawing.Size(86, 32);
             this.label4.TabIndex = 65;
             this.label4.Text = "Email :";
             // 
@@ -81,7 +81,7 @@ namespace WinForms
             this.label2.Location = new System.Drawing.Point(44, 177);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.Size = new System.Drawing.Size(205, 32);
             this.label2.TabIndex = 64;
             this.label2.Text = "Customer Name :";
             // 
@@ -92,7 +92,7 @@ namespace WinForms
             this.label1.Location = new System.Drawing.Point(120, 103);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.Size = new System.Drawing.Size(90, 32);
             this.label1.TabIndex = 63;
             this.label1.Text = "Phone:";
             // 
@@ -102,7 +102,7 @@ namespace WinForms
             this.txtAddress.Location = new System.Drawing.Point(265, 323);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(430, 33);
+            this.txtAddress.Size = new System.Drawing.Size(430, 39);
             this.txtAddress.TabIndex = 62;
             // 
             // txtEmail
@@ -112,7 +112,7 @@ namespace WinForms
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(430, 33);
+            this.txtEmail.Size = new System.Drawing.Size(430, 39);
             this.txtEmail.TabIndex = 61;
             // 
             // txtCusName
@@ -122,7 +122,7 @@ namespace WinForms
             this.txtCusName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCusName.MaxLength = 50;
             this.txtCusName.Name = "txtCusName";
-            this.txtCusName.Size = new System.Drawing.Size(430, 33);
+            this.txtCusName.Size = new System.Drawing.Size(430, 39);
             this.txtCusName.TabIndex = 60;
             // 
             // txtPhone
@@ -132,7 +132,7 @@ namespace WinForms
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(430, 33);
+            this.txtPhone.Size = new System.Drawing.Size(430, 39);
             this.txtPhone.TabIndex = 59;
             // 
             // btnCreate
@@ -149,7 +149,7 @@ namespace WinForms
             // 
             // FormAddCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(780, 498);
