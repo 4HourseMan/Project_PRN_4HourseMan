@@ -270,12 +270,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Create.png" />
+    <Content Include="Images\Delete.png" />
     <Content Include="Images\Logo.png" />
     <Content Include="Images\ManageCar.png" />
     <Content Include="Images\ManageCus.png" />
     <Content Include="Images\ManageEmp.png" />
     <Content Include="Images\ManageOrder.png" />
     <Content Include="Images\ManageSup.png" />
+    <Content Include="Images\Search.png" />
+    <Content Include="Images\Update.png" />
     <Content Include="Images\ViewCar.png" />
     <Content Include="Images\ViewCusInfoIcon.png" />
     <Content Include="Images\ViewOrder.png" />
