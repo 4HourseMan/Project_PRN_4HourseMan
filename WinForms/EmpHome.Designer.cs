@@ -31,7 +31,7 @@ namespace WinForms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpHome));
             this.btnLogout = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnManageCustomer = new System.Windows.Forms.Button();
             this.btnManageOrder = new System.Windows.Forms.Button();
             this.btnViewSup = new System.Windows.Forms.Button();
             this.btnViewCar = new System.Windows.Forms.Button();
@@ -53,19 +53,20 @@ namespace WinForms
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button5
+            // btnManageCustomer
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(32, 434);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(394, 335);
-            this.button5.TabIndex = 12;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnManageCustomer.FlatAppearance.BorderSize = 0;
+            this.btnManageCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnManageCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnManageCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnManageCustomer.Image")));
+            this.btnManageCustomer.Location = new System.Drawing.Point(32, 434);
+            this.btnManageCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageCustomer.Name = "btnManageCustomer";
+            this.btnManageCustomer.Size = new System.Drawing.Size(394, 335);
+            this.btnManageCustomer.TabIndex = 12;
+            this.btnManageCustomer.UseVisualStyleBackColor = true;
+            this.btnManageCustomer.Click += new System.EventHandler(this.btnManageCustomer_Click);
             // 
             // btnManageOrder
             // 
@@ -131,7 +132,7 @@ namespace WinForms
             this.ClientSize = new System.Drawing.Size(1154, 782);
             this.Controls.Add(this.lbUID);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnManageCustomer);
             this.Controls.Add(this.btnManageOrder);
             this.Controls.Add(this.btnViewSup);
             this.Controls.Add(this.btnViewCar);
@@ -148,7 +149,7 @@ namespace WinForms
         #endregion
 
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnManageCustomer;
         private System.Windows.Forms.Button btnManageOrder;
         private System.Windows.Forms.Button btnViewSup;
         private System.Windows.Forms.Button btnViewCar;

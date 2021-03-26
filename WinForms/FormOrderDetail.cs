@@ -79,7 +79,7 @@ namespace WinForms
 
         public List<Product> list => products;
 
-        public List<Product> listP => listPro;
+        public List<Product> listP => products;
 
         public FormOrderDetail()
         {
@@ -205,7 +205,6 @@ namespace WinForms
                 }
                 if (check >= 0)
                 {
-                    listPro.RemoveAt(check);
                     products.RemoveAt(check);
                     LoadCart();
                     MessageBox.Show("Delete success!");
@@ -273,7 +272,6 @@ namespace WinForms
                     if (flag && quant <= maxQuant)
                     {
                         products[check].Price = quant * pCartPrice;
-                        listPro[check].Quantity = maxQuant - quant;
                         products[check].Quantity = quant;
                         LoadCart();
                         MessageBox.Show("Update success!" + quant);
