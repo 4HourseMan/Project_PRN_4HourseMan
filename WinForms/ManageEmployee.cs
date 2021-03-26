@@ -57,7 +57,7 @@ namespace WinForms
         private void btnCreate_Click(object sender, System.EventArgs e)
         {
             FormAddEmployee formAddEmployee = new FormAddEmployee();
-            formAddEmployee.Show();
+            formAddEmployee.ShowDialog();
         }
 
         private void btnSearch_Click(object sender, System.EventArgs e)
