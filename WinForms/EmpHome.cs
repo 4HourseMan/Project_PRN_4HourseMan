@@ -43,5 +43,11 @@ namespace WinForms
             ManageOrder order = new ManageOrder() { userID = UID};
             order.Show();
         }
+
+        private void btnManageCustomer_Click(object sender, EventArgs e)
+        {
+            ManageCustomerInfo customerInfo = new ManageCustomerInfo();
+            customerInfo.Show();
+        }
     }
 }
