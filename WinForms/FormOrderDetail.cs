@@ -306,14 +306,20 @@ namespace WinForms
                 }
                 if (err.Equals(""))
                 {
-                    MCusP.AddCustomer();
-                    orderID = MOP.AddOrder();
-                    MDP.AddDetail();
-                    MCP.UpdateQuantityProduct();
-                    MessageBox.Show("OK");
-                    LoadCar();
-                    products.Clear();
-                    LoadCart();
+                    if(products.Count > 0)
+                    {
+                        MCusP.AddCustomer();
+                        orderID = MOP.AddOrder();
+                        MDP.AddDetail();
+                        MCP.UpdateQuantityProduct();
+                        MessageBox.Show("OK");
+                        LoadCar();
+                        products.Clear();
+                        LoadCart();
+                    } else
+                    {
+                        MessageBox.Show("No product");
+                    }
                 }
                 else
                 {
