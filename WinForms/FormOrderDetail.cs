@@ -22,7 +22,6 @@ namespace WinForms
 
         List<Product> listCar;
         List<Product> products;
-        List<Product> listPro;
         Product p = null;
         string pCartID = null;
         int pCartPrice = 0;
@@ -42,7 +41,6 @@ namespace WinForms
         public string Email => "";
 
         public string Address => "";
-
 
         public string UserID => UID;
 
@@ -89,7 +87,6 @@ namespace WinForms
             MOP = new ManageOrderPresenter(this);
             MDP = new ManagerDetailPresenter(this);
             products = new List<Product>();
-            listPro = new List<Product>();
         }
 
         private void LoadCar()
@@ -138,27 +135,6 @@ namespace WinForms
             {
                 if (p != null)
                 {
-                    listPro.Add(p);
-                    int flag = -1;
-                    for (int i = 0; i < products.Count; i++)
-                    {
-                        if (products[i].ProductID.Equals(p.ProductID))
-                        {
-                            flag = i;
-                        }
-                    }
-                    int maxQuant = 0;
-                    for (int i = 0; i < listCar.Count; i++)
-                    {
-                        if (listCar[i].ProductID.Equals(p.ProductID))
-                        {
-                            maxQuant = listCar[i].Quantity;
-                        }
-                    }
-                    if(flag >= 0)
-                    {
-                        listPro[flag].Quantity = maxQuant - 1;
-                    }
                     products.Add(p);
                     LoadCart();
                 }
@@ -318,7 +294,7 @@ namespace WinForms
                         LoadCart();
                     } else
                     {
-                        MessageBox.Show("No product");
+                        MessageBox.Show("No product added");
                     }
                 }
                 else

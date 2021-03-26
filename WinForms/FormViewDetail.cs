@@ -19,6 +19,7 @@ namespace WinForms
         public FormViewDetail()
         {
             InitializeComponent();
+            this.CenterToScreen();
             MDP = new ManagerDetailPresenter(this);
         }
 
