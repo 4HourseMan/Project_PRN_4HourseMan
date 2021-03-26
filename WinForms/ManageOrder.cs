@@ -70,6 +70,7 @@ namespace WinForms
         {
             FormOrderDetail detail = new FormOrderDetail() { UID = userID};
             detail.ShowDialog();
+            LoadOrder();
         }
 
 

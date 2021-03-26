@@ -22,6 +22,7 @@ namespace WinForms
         {
             Login login = new Login();
             this.Hide();
+
             login.Show();
         }
 
