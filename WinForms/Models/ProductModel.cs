@@ -57,5 +57,10 @@ namespace WinForms.Models
         {
             product.UpdateIncreaseQuantityProduct(p);
         }
+
+        public List<Product> SearchProductAD(string name)
+        {
+            return product.SearchProductAD(name);
+        }
     }
 }

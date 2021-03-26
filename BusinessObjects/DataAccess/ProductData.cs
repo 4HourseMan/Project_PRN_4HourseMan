@@ -119,6 +119,37 @@ namespace BusinessObjects.DataAccess
             return list;
         }
 
+        public List<Product> SearchProductAD(String searchName)
+        {
+            SqlParameter name = new SqlParameter("@ProductName", searchName);
+            List<Product> list = null;
+            try
+            {
+                SqlDataReader rd = DataProvider.ExecuteQueryWithDataReader("SearchProductByNameAdmin", name);
+                while (rd.Read())
+                {
+                    string id = rd.GetString(0);
+                    string nameP = rd.GetString(1);
+                    string cate = rd.GetString(2);
+                    string sup = rd.GetString(5);
+                    float price = Convert.ToSingle(rd.GetDouble(3));
+                    int quant = rd.GetInt32(4);
+                    DateTime date = rd.GetDateTime(6);
+                    Product p = new Product(id, nameP, cate, sup, price, quant, date, true);
+                    if (list == null)
+                    {
+                        list = new List<Product>();
+                    }
+                    list.Add(p);
+                }
+            }
+            catch (SqlException)
+            {
+                return null;
+            }
+            return list;
+        }
+
         public List<Product> SearchProductBySomeThing(String supID, String cateID, String searchName)
         {
             SqlParameter name = new SqlParameter("@ProductName", searchName);

@@ -68,6 +68,16 @@ namespace WinForms.Presenters
             return ProductModel.SearchProduct(ProductName);
         }
 
+        public List<Product> SearchProductAD()
+        {
+            string ProductName = "%" + View.SearchName + "%";
+            if (ProductName == null)
+            {
+                ProductName = "%%";
+            }
+            return ProductModel.SearchProductAD(ProductName);
+        }
+
         public List<Product> SearchProductBySomeThing()
         {
             string ProductName = "%" + View.SearchName + "%";

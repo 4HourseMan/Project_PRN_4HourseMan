@@ -13,6 +13,8 @@ namespace WinForms.Models
         bool DeleteProduct(string id);
         bool UpdateProduct(Product p);
         List<Product> SearchProduct(string name);
+        List<Product> SearchProductAD(string name);
+
         List<Product> SearchProductBySomeThing(string sup, string cate, string name);
         List<Category> GetCate();
         List<Supplier> GetSup();

@@ -269,7 +269,6 @@ namespace WinForms
                         flag = false;
                         MessageBox.Show("Please input a number < " + maxQuant);
                     }
-
                     if (flag && quant <= maxQuant)
                     {
                         products[check].Price = quant * pCartPrice;

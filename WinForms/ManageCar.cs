@@ -50,7 +50,7 @@ namespace WinForms
         {
 
             MCP = new ManagerCarPresenter(this);
-            List<Product> list = MCP.SearchProduct();
+            List<Product> list = MCP.SearchProductAD();
             tblCar.DataSource = list;
             List<Category> list1 = MCP.GetCate();
             cbCategory.DataSource = list1;
