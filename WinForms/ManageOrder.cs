@@ -69,7 +69,7 @@ namespace WinForms
         private void btnCreate_Click(object sender, EventArgs e)
         {
             FormOrderDetail detail = new FormOrderDetail() { UID = userID};
-            detail.Show();
+            detail.ShowDialog();
         }
 
 

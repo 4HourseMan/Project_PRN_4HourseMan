@@ -177,11 +177,14 @@ namespace WinForms
 
         private void dgvSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgvSupplier.Rows[e.RowIndex];
-            txtSupplierID.Text = row.Cells[0].Value.ToString();
-            txtSupplierName.Text = row.Cells[1].Value.ToString();
-            txtSupplierOrigin.Text = row.Cells[2].Value.ToString();
-            chkSupplierStatus.Checked = Boolean.Parse(row.Cells[3].Value.ToString());
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvSupplier.Rows[e.RowIndex];
+                txtSupplierID.Text = row.Cells[0].Value.ToString();
+                txtSupplierName.Text = row.Cells[1].Value.ToString();
+                txtSupplierOrigin.Text = row.Cells[2].Value.ToString();
+                chkSupplierStatus.Checked = Boolean.Parse(row.Cells[3].Value.ToString());
+            }
         }
 
         private void ManageSupllier_FormClosing(object sender, FormClosingEventArgs e)
